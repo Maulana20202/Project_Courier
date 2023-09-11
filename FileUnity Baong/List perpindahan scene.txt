@@ -1,0 +1,37 @@
+Mekanik pindah scene apa aja yang perlu di simpan
+
+
+perpindahan semua
+
+duit harus di simpen di panggil di start
+
+waktu di simpen dan di panggil di start
+
+value lapar
+
+value stamina
+
+
+perpindahan dari rumah ke kota
+
+
+duit
+
+waktu
+
+value lapar stop
+
+value stamina stop
+
+
+perpindahan dari kantor ke kota
+
+
+prefab kendaraan
+
+duit
+
+waktu
+
+list misi
+

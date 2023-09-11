@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box Mainan
+  m_EditorClassIdentifier: 
+  NamaBox: Box Mainan
+  Deskripsi: Box dengan isi mainan di dalamnya pecah belah
+  id: 1
+  Berat: 5
+  GambarBarang: {fileID: 0}
+  nyawaBarang: 100
+  jenis: 0
+  prefabsBox: {fileID: 113115932136102702, guid: 3e6b7d5ee979c9241901599d28a18f41, type: 3}

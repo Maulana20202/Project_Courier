@@ -1,0 +1,10 @@
+player memencet E ke manager lalu misi aktif
+
+lalu misi akan aktif lalu mengspawn npc penerima paket
+
+list misi akan masuk ke dalam
+
+
+
+
+

@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: 933d9c9ed01a94045ba1efa5a9450838
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_0
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 185
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68fbc61c5a744d4a8e3b8f5f955b914
+      internalID: -982046150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_1
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 185
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba4624bbe6db564088d77746eb8ebcb
+      internalID: -2032730943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 152
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1799851bc64dc044e955e18e5b305283
+      internalID: -2146324718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_3
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 166
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5955d416bcbc8f542898e997f1df24e3
+      internalID: 587629135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 9
+        width: 269
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8911e1881e26441907c416cf522d95
+      internalID: -2069199694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_5
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 17
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f520e30b03a324c973a53a7675036d
+      internalID: 1243617528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 17
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e1bd9593071a14b9818833b6dacc0d
+      internalID: 363445925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 9
+        width: 35
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e150328e14154f45ba25219bdf3f75f
+      internalID: -1468943467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_8
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 9
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1e6e07f78967e42acc80dfee2c5469
+      internalID: -172825764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 9
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7b25ac6534cab4ea752cff9aa9bd56
+      internalID: 347489497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 9
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827caeec379ae6147a0afe338f755c36
+      internalID: 689032384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_11
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 9
+        width: 28
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b49564056c1424ca2e4ad943f224fd
+      internalID: 543206040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_12
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 9
+        width: 50
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af335841cec21d64a9fd74d97af7df72
+      internalID: -1175510773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f10c5448d9394f84c92f9f148e778a5f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_0: -982046150
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_1: -2032730943
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_10: 689032384
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_11: 543206040
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_12: -1175510773
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_2: -2146324718
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_3: 587629135
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_4: -2069199694
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_5: 1243617528
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_6: 363445925
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_7: -1468943467
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_8: -172825764
+      Sekolah-Tinggi-Multi-Media-MMTC-Yogyakarta_9: 347489497
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
