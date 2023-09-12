@@ -57,7 +57,7 @@ public class MenuManager : MonoBehaviour
         AnimasiPressStart.SetBool("Baru Masuk", false);
 
         yield return new WaitForSeconds(2f);
-
+   
         AudioMusic.SetActive(true);
 
        yield return null;

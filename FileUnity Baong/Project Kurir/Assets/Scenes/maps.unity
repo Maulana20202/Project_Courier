@@ -603,6 +603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 928931740}
+  - component: {fileID: 928931741}
   m_Layer: 0
   m_Name: TIme Controller
   m_TagString: Untagged
@@ -625,6 +626,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 800879906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &928931741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928931739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3ff00c6757c77409d7cf0f756c4f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clockText: {fileID: 0}
+  dayText: {fileID: 0}
+  seasonText: {fileID: 0}
+  yearText: {fileID: 0}
+  siang: {fileID: 0}
+  malam: {fileID: 0}
 --- !u!1 &932039972
 GameObject:
   m_ObjectHideFlags: 0
