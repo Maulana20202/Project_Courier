@@ -11,6 +11,8 @@ public class Trunk : interactable
     public PlayerMovement playerMovement;
     public PlayerCameraRotation playerCameraRotation;
 
+    public List<GameObject> TempatBarang = new List<GameObject>();
+
     public TrunkManager trunkManager;
 
     public BoxStats boxStats;
@@ -39,6 +41,55 @@ public class Trunk : interactable
          boxStats = BoxStatsContainer.Instance.boxStatus;
          NyawaBarang = BoxStatsContainer.Instance.nyawaBarang;
 
+
+
+         float Barang_25 = beratBarang * 0.25f;
+
+         float Barang_50 = beratBarang * 0.50f; 
+
+         float Barang_75 = beratBarang * 0.75f; 
+
+         float Barang_100 = beratBarang * 1f;
+
+         if (beratBarangCurrent < Barang_25){
+            TempatBarang[0].SetActive(false);
+            TempatBarang[1].SetActive(false);
+            TempatBarang[2].SetActive(false);
+            TempatBarang[3].SetActive(false);
+         } 
+
+         if(beratBarangCurrent >= Barang_25){
+            TempatBarang[0].SetActive(true);
+            TempatBarang[1].SetActive(false);
+            TempatBarang[2].SetActive(false);
+            TempatBarang[3].SetActive(false);
+         }
+         
+         if(beratBarangCurrent >= Barang_50){
+            TempatBarang[0].SetActive(true);
+            TempatBarang[1].SetActive(true);
+            TempatBarang[2].SetActive(false);
+            TempatBarang[3].SetActive(false);
+         }
+         
+         if(beratBarangCurrent >= Barang_75){
+            TempatBarang[0].SetActive(true);
+            TempatBarang[1].SetActive(true);
+            TempatBarang[2].SetActive(true);
+            TempatBarang[3].SetActive(false);
+         }
+         
+         if(beratBarangCurrent >= Barang_100){
+            TempatBarang[0].SetActive(true);
+            TempatBarang[1].SetActive(true);
+            TempatBarang[2].SetActive(true);
+            TempatBarang[3].SetActive(true);
+         }
+         
+
+
+         
+
     }
 
     protected override void Interact()
@@ -59,9 +110,13 @@ public class Trunk : interactable
     {
         if (beratBarangCurrent < beratBarang)
         {
-            beratBarangCurrent += boxStats.Berat;
+            beratBarangCurrent = 0;
             trunkManager.Add(boxStats, NyawaBarang);
             trunkManager.ForDestroy(BoxStatsContainer.Instance.boxStatsObject);
+
+            for (int i = 0; i < trunkManager.Items.Count;i++ ){
+            beratBarangCurrent += trunkManager.Items[i].Berat;
+        }
 
         }
        
