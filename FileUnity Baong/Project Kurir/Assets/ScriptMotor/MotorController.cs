@@ -6,9 +6,11 @@ using TMPro;
 
 public class MotorController : MonoBehaviour
 {
-    public float maxSpeed, acceleration, turn;
+    public float maxSpeed,maxMundur, acceleration, turn;
 
     public Rigidbody rb, carBody;
+
+    public Animator animateMundur;
 
     public AnimasiPengendara animasiPengendara;
     public Transform TitikKakiKiri;
@@ -46,14 +48,13 @@ public class MotorController : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        verticalInput = Input.GetAxis("Vertical") * -1f;
         Visuals();
 
     }
 
     void FixedUpdate()
     {
-        
 
         if (Driving)
         {
@@ -89,22 +90,28 @@ public class MotorController : MonoBehaviour
                 rb.constraints = RigidbodyConstraints.None;
             }
 
-            if (Mathf.Abs(verticalInput) > 0.1f || Input.GetAxis("Jump") < 1)
+            if (verticalInput < 0.1f)
             {
 
                 rb.velocity = Vector3.Lerp(rb.velocity, carBody.transform.forward * verticalInput * maxSpeed, acceleration / 10 * Time.deltaTime);
 
             } else {
-
-                rb.velocity = Vector3.Lerp(rb.velocity, carBody.transform.forward * 0, 0.0000000001f * Time.deltaTime);
+                rb.velocity = Vector3.Lerp(rb.velocity, carBody.transform.forward * verticalInput * maxMundur, acceleration / 10 * Time.deltaTime);
             }
 
-            if (Mathf.Abs(carVelocity.z) <= 0.1f)
+            if (carVelocity.z >= -0.1f)
             {
                 animasiPengendara.IKPoints[5].position = Vector3.Lerp(animasiPengendara.IKPoints[5].position, TitikKakiKiri.position, 0.1f);
             } else
             {
                 animasiPengendara.IKPoints[5].position = Vector3.Lerp(animasiPengendara.IKPoints[5].position, TitikAwalKaki.position, 0.1f);
+            }
+
+            if (carVelocity.z > 0.5f){
+
+                animateMundur.SetBool("Mundur", true);
+            } else {
+                animateMundur.SetBool("Mundur", false);
             }
         }
             
@@ -127,7 +134,7 @@ public class MotorController : MonoBehaviour
             if (Mathf.Abs(carVelocity.z) > 1)
             {
                 BodyMesh.localRotation = Quaternion.Slerp(BodyMesh.localRotation, Quaternion.Euler(0,
-                                   BodyMesh.localRotation.eulerAngles.y, BodyTilt * horizontalInput * leanCurve.Evaluate(carVelocity.z / maxSpeed)), 0.02f);
+                                   BodyMesh.localRotation.eulerAngles.y, BodyTilt * horizontalInput * leanCurve.Evaluate(carVelocity.z / maxSpeed * -1f)), 0.02f);
             }
             else
             {
