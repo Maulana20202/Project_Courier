@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Box : interactable
@@ -18,6 +19,8 @@ public class Box : interactable
     private float Waktu = 1f;
     private float currentWaktu;
 
+    public bool IsMengambil;
+
     // Start is called before the first frame update
     [System.Obsolete]
     void Start()
@@ -34,21 +37,29 @@ public class Box : interactable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Diambil)
-        {
-            rb.velocity = playerUtama.GetComponent<Rigidbody>().velocity;
-            rb.AddForce(transform.right * -5f, ForceMode.Impulse);
-            this.transform.SetParent(null);
-            rb.useGravity = true;
-            rb.constraints = RigidbodyConstraints.None;
-            BC.enabled = true;
-            Diambil = false;
+        
+            if ( Diambil){
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Diambil = false;
+                    rb.AddForce(transform.right * -5f, ForceMode.Impulse);
+                    this.transform.SetParent(null);
+                    rb.useGravity = true;
+                    rb.constraints = RigidbodyConstraints.None;
+                    BC.enabled = true;
+                    
 
-            BoxStatsContainer.Instance.RemoveBoxStats();
-        }
+                    BoxStatsContainer.Instance.RemoveBoxStats();
+                }
+            }
+            
 
         nyawaBarang = boxStats.nyawaBarang;
 
+        if(IsMengambil){
+            StartCoroutine(DelayDiambil());
+        }
+        
 
     }
 
@@ -56,28 +67,32 @@ public class Box : interactable
     {
         if (Diambil == false)
         {
-            StartCoroutine(DelayDiambil());
+            IsMengambil = true;
+            BoxStatsContainer.Instance.AddBoxStats(boxStats, thisBox, nyawaBarang);
         }
-        BoxStatsContainer.Instance.AddBoxStats(boxStats, thisBox, nyawaBarang);
+        
         
     }
 
 
     private IEnumerator DelayDiambil()
     {
-       
-        transform.position = titikAmbilBarang.position;
         transform.rotation = titikAmbilBarang.rotation;
+        transform.position = Vector3.Lerp(transform.position,titikAmbilBarang.position,10f * Time.deltaTime);
+        
         
         this.transform.SetParent(playerUtama.transform.GetChild(1));
         rb.useGravity = false;
         BC.enabled = false;
         BoxStatsContainer.Instance.boxStatsObject = this.gameObject;
+        
+       
             
+        yield return new WaitForSeconds(0.4f);
         rb.constraints = RigidbodyConstraints.FreezePosition;
-            
-        yield return new WaitForSeconds(0.5f);
         Diambil = true;
+        IsMengambil = false;
+        
 
     }
 }

@@ -12,25 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c09ffd848b4dfa4b8d7f8b5cdb34b24, type: 3}
   m_Name: Savean Bagasi Motor
   m_EditorClassIdentifier: 
-  ListBagasi:
-  - {fileID: 11400000, guid: e9d4260a6a59f134981938941bc677a9, type: 2}
-  - {fileID: 11400000, guid: b1ee0d780069d824e954cd6603ad7de1, type: 2}
-  - {fileID: 11400000, guid: 44c4e3dacef1e8a4dabc46aa582e7ab7, type: 2}
-  - {fileID: 11400000, guid: 4e96eb9b90a90ba44a4e6813f0ccf8e5, type: 2}
-  - {fileID: 11400000, guid: b79b75cdcb6fffc42a99e9948a475c32, type: 2}
-  - {fileID: 11400000, guid: b1ee0d780069d824e954cd6603ad7de1, type: 2}
-  - {fileID: 11400000, guid: e9d4260a6a59f134981938941bc677a9, type: 2}
-  - {fileID: 11400000, guid: 44c4e3dacef1e8a4dabc46aa582e7ab7, type: 2}
-  - {fileID: 11400000, guid: 4e96eb9b90a90ba44a4e6813f0ccf8e5, type: 2}
-  - {fileID: 11400000, guid: b79b75cdcb6fffc42a99e9948a475c32, type: 2}
-  ListNyawaBarang:
-  - 100
-  - 100
-  - 100
-  - 100
-  - 100
-  - 100
-  - 100
-  - 100
-  - 100
-  - 100
+  ListBagasi: []
+  ListNyawaBarang: []

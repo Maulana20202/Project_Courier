@@ -30,8 +30,14 @@ public class TrunkManager : MonoBehaviour
 
     public void Start()
     {
-        Items = saveanList.ListBagasi;
-        nyawaBarang = saveanList.ListNyawaBarang;
+        if(saveanList.ListBagasi != null){
+            Items = saveanList.ListBagasi;
+        }
+
+        if(saveanList.ListNyawaBarang != null){
+            nyawaBarang = saveanList.ListNyawaBarang;
+        }
+
     }
 
 

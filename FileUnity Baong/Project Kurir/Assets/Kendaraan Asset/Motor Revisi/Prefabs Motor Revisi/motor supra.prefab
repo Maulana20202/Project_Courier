@@ -1273,6 +1273,7 @@ MonoBehaviour:
   NyawaBarang: 0
   beratBarang: 100
   beratBarangCurrent: 0
+  NgitungBerat: 0
 --- !u!1 &863797532001842648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,7 +2514,10 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Pelvis'\n\tTransform 'Base'\n\tTransform 'Pelvis'\n\tTransform
+    'Base'\n\tTransform 'Pelvis'\n\tTransform 'Base'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

@@ -23,6 +23,8 @@ public class Trunk : interactable
 
     public float beratBarangCurrent;
 
+    public bool NgitungBerat;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,7 @@ public class Trunk : interactable
         Inventory = InventoryCanvas.transform.GetChild(0).gameObject;
         playerMovement = FindObjectOfType<PlayerMovement>();
         
-
+        NgitungBerat = true;
         trunkManager = GetComponent<TrunkManager>();
     }
 
@@ -41,6 +43,23 @@ public class Trunk : interactable
          boxStats = BoxStatsContainer.Instance.boxStatus;
          NyawaBarang = BoxStatsContainer.Instance.nyawaBarang;
 
+
+        if(NgitungBerat == true){
+            if(trunkManager.Items.Count == 0){
+                int CheckPoint = trunkManager.Items.Count;
+                int CheckPointMinus = CheckPoint -= 1;
+                beratBarangCurrent = 0;
+                for (int i = 0; i < trunkManager.Items.Count;i++ ){
+
+                    if (i == CheckPointMinus){
+                    NgitungBerat = false;
+                    }
+                beratBarangCurrent += trunkManager.Items[i].Berat;
+            }
+            
+        }
+
+        }
 
 
          float Barang_25 = beratBarang * 0.25f;
@@ -94,31 +113,44 @@ public class Trunk : interactable
 
     protected override void Interact()
     {
-        Inventory.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        playerMovement.enabled = false;
-        playerCameraRotation.enabled = false;
+        if(BoxStatsContainer.Instance.AngkutBarang){
 
-        trunkManager.listItem();
-        this.gameObject.tag = "MainTrunk";
-        InventoryController.Instance.Bagasi = this.gameObject;
+            if (beratBarangCurrent < beratBarang)
+            {
+                if(BoxStatsContainer.Instance.boxStatus != null){
+                    
+                trunkManager.Add(BoxStatsContainer.Instance.boxStatus, BoxStatsContainer.Instance.nyawaBarang);
+                trunkManager.ForDestroy(BoxStatsContainer.Instance.boxStatsObject);
+                BoxStatsContainer.Instance.boxStatus = null;
+                BoxStatsContainer.Instance.nyawaBarang = 0;
+                NgitungBerat = true;
+                BoxStatsContainer.Instance.AngkutBarang = false;
+
+                }
+
+            }
+
+        } else {
+            
+            Inventory.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            playerMovement.enabled = false;
+            playerCameraRotation.enabled = false;
+
+            trunkManager.listItem();
+            this.gameObject.tag = "MainTrunk";
+            InventoryController.Instance.Bagasi = this.gameObject;
+
+        }
+        
+        
 
     }
 
     protected override void InteractAlter()
     {
-        if (beratBarangCurrent < beratBarang)
-        {
-            beratBarangCurrent = 0;
-            trunkManager.Add(boxStats, NyawaBarang);
-            trunkManager.ForDestroy(BoxStatsContainer.Instance.boxStatsObject);
-
-            for (int i = 0; i < trunkManager.Items.Count;i++ ){
-            beratBarangCurrent += trunkManager.Items[i].Berat;
-        }
-
-        }
+        
        
     }
 

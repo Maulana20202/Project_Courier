@@ -13,6 +13,8 @@ public class BoxStatsContainer : MonoBehaviour
 
     public Transform titikBarang;
 
+    public bool AngkutBarang;
+
     public PlayerMovement playerMovement;
     public PlayerCameraRotation playerCameraRotation;
     
@@ -23,6 +25,7 @@ public class BoxStatsContainer : MonoBehaviour
         playerMovement = FindAnyObjectByType<PlayerMovement>();
         playerCameraRotation = FindAnyObjectByType<PlayerCameraRotation>();
     }
+    
 
     // Update is called once per frame
 
@@ -31,6 +34,7 @@ public class BoxStatsContainer : MonoBehaviour
         boxStatus = boxstats;
         nyawaBarang = NyawaBarang;
         boxStatsObject = boxstatsobject;
+        AngkutBarang = true;
     }
 
     public void RemoveBoxStats()
