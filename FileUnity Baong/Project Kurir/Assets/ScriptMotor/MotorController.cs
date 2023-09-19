@@ -22,6 +22,12 @@ public class MotorController : MonoBehaviour
     public PhysicMaterial frictionMaterial;
 
 
+    //Ground Check
+    public float playerHeight;
+    public LayerMask whatIsGround;
+    public bool grounded;
+
+
     public Transform BodyMesh;
     public Transform Handle;
     public Transform[] Wheel;
@@ -51,13 +57,21 @@ public class MotorController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical") * -1f;
         Visuals();
 
+
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f - 0.2f, whatIsGround);
+
+       
     }
 
     void FixedUpdate()
     {
 
+        
+
         if (Driving)
         {
+
+            carBody.isKinematic = false;
 
             carVelocity = carBody.transform.InverseTransformDirection(carBody.velocity);
 
@@ -113,6 +127,15 @@ public class MotorController : MonoBehaviour
             } else {
                 animateMundur.SetBool("Mundur", false);
             }
+        } else {
+
+
+             if (grounded){
+            carBody.isKinematic = true;
+        } else {
+            carBody.isKinematic = false;
+        }
+
         }
             
 

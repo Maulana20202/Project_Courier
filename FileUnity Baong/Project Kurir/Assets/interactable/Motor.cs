@@ -64,6 +64,8 @@ public class Motor : interactable
                 Rider.SetActive(false);
                 Debug.Log("kepencet Lgi");
 
+                controllerMobil.carVelocity.z = 0f;
+
             }
         }
     }

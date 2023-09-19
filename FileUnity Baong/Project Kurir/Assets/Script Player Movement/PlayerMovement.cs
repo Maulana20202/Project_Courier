@@ -65,7 +65,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+         
         if (currentCountDown <= 0) {
 
             StatsPerut -= 3f;
@@ -82,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Ground Check apakah nempel atau tidak
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+       
 
 
         if (grounded)
