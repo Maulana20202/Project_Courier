@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 2462610406365822916}
   m_Layer: 6
   m_Name: motor supra
-  m_TagString: Untagged
+  m_TagString: Kendaraan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

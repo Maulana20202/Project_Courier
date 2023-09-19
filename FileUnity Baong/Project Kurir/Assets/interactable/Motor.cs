@@ -35,6 +35,8 @@ public class Motor : interactable
         rb = playerUtama.GetComponent<Rigidbody>();
         
         camUtamaParent = GameObject.FindWithTag("MainCamera");
+
+        
         
 
     }
@@ -42,10 +44,10 @@ public class Motor : interactable
     // Update is called once per frame
     void Update()
     {
+        
         if(camUtamaParent.transform.GetChild(0).gameObject != null){
             camUtama = camUtamaParent.transform.GetChild(0).gameObject;
         }
-        
         
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -64,7 +66,7 @@ public class Motor : interactable
                 Rider.SetActive(false);
                 Debug.Log("kepencet Lgi");
 
-                controllerMobil.carVelocity.z = 0f;
+                
 
             }
         }
@@ -99,5 +101,14 @@ public class Motor : interactable
 
         Debug.Log("kepencet");
 
+    }
+
+    public void NaikMotorStart(){
+        camKendaraan.SetActive(true);
+        controllerMobil.Driving = true;
+        PlayerInteract.instance.player.SetActive(false);
+        PlayerInteract.instance.playerUI.UpdateText(string.Empty);
+        Rider.SetActive(true);
+        NaikMobil = true;
     }
 }

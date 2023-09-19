@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+
 public class KeluarKantor : interactable
 {
 
@@ -24,6 +26,18 @@ public class KeluarKantor : interactable
     void Update()
     {
         
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.tag == "Kendaraan"){
+
+            MainMenu.SetActive(false);
+            LoadingScreen.SetActive(true);
+
+            StartCoroutine(LoadingScreenWait(3));
+            
+        }
     }
 
     protected override void Interact(){
