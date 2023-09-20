@@ -8,13 +8,18 @@ using UnityEngine;
 public class KENDARAANSCENEBARU : MonoBehaviour
 {
 
+    public static KENDARAANSCENEBARU instance;
     public GameObject PlayerUtama;
     public SaveUIValue SaveUI;
 
     public Transform PosisiSpawn;
 
+    public bool SpawnKendaraan;
 
 
+    void Awake(){
+        instance = this;
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -23,18 +28,14 @@ public class KENDARAANSCENEBARU : MonoBehaviour
 
         GameObject Kendaraan;
 
-        Motor motor;
 
         Player = PlayerUtama.transform.GetChild(0).gameObject;
 
         PosisiSpawn = this.transform;
         if(SaveUI.KendaraanYangDigunakan != null){
-            Kendaraan = Instantiate(SaveUI.KendaraanYangDigunakan, PosisiSpawn.position, quaternion.identity);
-            motor = Kendaraan.GetComponentInChildren<Motor>();
-
-            motor.NaikMotorStart();
+            Kendaraan = Instantiate(SaveUI.KendaraanYangDigunakan, PosisiSpawn.position, quaternion.identity); 
             Player.transform.SetParent(Kendaraan.transform);
-            Player.SetActive(false);
+            SpawnKendaraan = true;
         }
         
        

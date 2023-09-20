@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class StatsKendaraan : MonoBehaviour
+{
+
+    public int StatsBensin;
+
+    public int StatsKondisi;
+
+    public int StatsMuatan;
+
+    public bool UpgradeBensin;
+
+    public bool UpgradeKondisi;
+
+    public bool UpgradeMuatan;
+    // Start is called before the first frame update
+    public void BaseUpgradingBensin(){
+        UpgradingBensin();
+    }
+
+    public void BaseUpgradingKondisi(){
+        UpgradingKondisi();
+    }
+
+    public void BaseUpgradingMuatan(){
+        UpgradingMuatan();
+    }
+
+    protected virtual void UpgradingBensin(){
+
+    }
+
+    protected virtual void UpgradingKondisi(){
+
+    }
+
+    protected virtual void UpgradingMuatan(){
+
+    }
+}

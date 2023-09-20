@@ -25,6 +25,10 @@ public class Trunk : interactable
 
     public bool NgitungBerat;
 
+    //savean
+
+    public SaveanValueMotor saveanMotor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,8 @@ public class Trunk : interactable
         
         NgitungBerat = true;
         trunkManager = GetComponent<TrunkManager>();
+
+        beratBarang = saveanMotor.MuatanValueMax;
     }
 
     // Update is called once per frame
@@ -42,6 +48,8 @@ public class Trunk : interactable
         playerCameraRotation = FindObjectOfType<PlayerCameraRotation>();
          boxStats = BoxStatsContainer.Instance.boxStatus;
          NyawaBarang = BoxStatsContainer.Instance.nyawaBarang;
+
+        saveanMotor.MuatanValueMax = beratBarang;
 
 
         if(NgitungBerat == true){

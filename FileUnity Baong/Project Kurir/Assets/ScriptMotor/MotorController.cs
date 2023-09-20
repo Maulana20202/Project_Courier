@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UIElements.Experimental;
 
 public class MotorController : MonoBehaviour
 {
@@ -44,10 +45,32 @@ public class MotorController : MonoBehaviour
 
     public float radius, horizontalInput, verticalInput;
 
+    //value Bensin Dan Kondisi Kendaraan
+
+
+    public float BensinValueMin = 100;
+    public float BensinValueMax = 100;
+    public float BensinValue = 100;
+
+
+    public float KondisiKendaraanValueMin = 100;
+    public float KondisiKendaraanValueMax = 100;
+
+    public float KondisiKendaraanValue = 100;
+
+    public float WaktuNgurang;
+
+    public float WaktuNgurangCurrent;
+
+    //Savean
+
+    public SaveanValueMotor saveanMotor;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        BensinValueMax = saveanMotor.BensinValueMax;
+        KondisiKendaraanValueMax = saveanMotor.KondisiValueMax;
     }
 
     // Update is called once per frame
@@ -60,6 +83,17 @@ public class MotorController : MonoBehaviour
 
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f - 0.2f, whatIsGround);
 
+        if(carVelocity.z < -1){
+            if(WaktuNgurangCurrent <= 0){
+                BensinValue -= 5;
+                WaktuNgurangCurrent = WaktuNgurang;
+            } else {
+                WaktuNgurangCurrent -= Time.deltaTime;
+            }
+        }
+
+        saveanMotor.BensinValueMax = BensinValueMax;
+        saveanMotor.KondisiValueMax = KondisiKendaraanValueMax;
        
     }
 
@@ -75,11 +109,11 @@ public class MotorController : MonoBehaviour
 
             carVelocity = carBody.transform.InverseTransformDirection(carBody.velocity);
 
-            if (Mathf.Abs(carVelocity.x) > 0)
+            /*if (Mathf.Abs(carVelocity.x) > 0)
             {
                 //changes friction according to sideways speed of car
                 frictionMaterial.dynamicFriction = frictionCurve.Evaluate(Mathf.Abs(carVelocity.x / 100));
-            }
+            }*/
 
             float sign = Mathf.Sign(carVelocity.z);
             float TurnMultipler = turnCurve.Evaluate(carVelocity.magnitude / maxSpeed);
@@ -169,5 +203,11 @@ public class MotorController : MonoBehaviour
 
 
 
+    }
+
+    void OnCollisionEnter(Collision col){
+        if (Mathf.Abs(carVelocity.z) >= 1){
+            KondisiKendaraanValue -= 5;
+        }
     }
 }

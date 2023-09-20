@@ -59,7 +59,7 @@ public class Motor : interactable
                 NaikMobil = false;
                 controllerMobil.Driving = false;
                 playerMovement.enabled = true;
-
+                rb.useGravity = true;
                 capsuleCollider.enabled = true;
                 playerUtama.transform.SetParent(null);
                 PlayerInteract.instance.player.SetActive(true);
@@ -70,7 +70,15 @@ public class Motor : interactable
 
             }
         }
-    }
+        if(KENDARAANSCENEBARU.instance != null){
+            if (KENDARAANSCENEBARU.instance.SpawnKendaraan == true){
+                    StartCoroutine("NaikMobilDelay");
+                    KENDARAANSCENEBARU.instance.SpawnKendaraan = false;
+                }
+            }
+
+        }
+        
 
     protected override void Interact()
     {
