@@ -13,8 +13,6 @@ public class DeteksiKendaraan : MonoBehaviour
 
         if (Kendaraan != null){
             UpgradingSystem.instance.Kendaraan = Kendaraan; 
-        } else {
-            UpgradingSystem.instance.Kendaraan = null;
         }
         
     }

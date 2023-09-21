@@ -41,4 +41,10 @@ public class StatsSupra : StatsKendaraan
         }
         
     }
+
+    protected override void MengisiBensin(){
+        if(motorStats.BensinValue < motorStats.BensinValueMax){
+            motorStats.BensinValue = motorStats.BensinValueMax;
+        }
+    }
 }

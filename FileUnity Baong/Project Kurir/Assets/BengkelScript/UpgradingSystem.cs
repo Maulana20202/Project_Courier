@@ -54,6 +54,10 @@ public class UpgradingSystem : MonoBehaviour
         
     }
 
+    public void IsiBensin(){
+        Stats.BaseMengisiBensin();
+    }
+
     public void Exit(){
         UIUpgrade.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;

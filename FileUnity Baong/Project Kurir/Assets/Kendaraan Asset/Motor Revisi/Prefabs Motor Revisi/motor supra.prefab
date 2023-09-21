@@ -698,6 +698,9 @@ MonoBehaviour:
   StatsBensin: 0
   StatsKondisi: 0
   StatsMuatan: 0
+  UpgradeBensin: 0
+  UpgradeKondisi: 0
+  UpgradeMuatan: 0
   motorStats: {fileID: 2462610406365822916}
   BagasiMotor: {fileID: 0}
 --- !u!136 &7925240340041338126
@@ -844,10 +847,15 @@ MonoBehaviour:
   radius: 0
   horizontalInput: 0
   verticalInput: 0
+  BensinValueMin: 100
+  BensinValueMax: 100
   BensinValue: 100
+  KondisiKendaraanValueMin: 100
+  KondisiKendaraanValueMax: 100
   KondisiKendaraanValue: 100
   WaktuNgurang: 5
   WaktuNgurangCurrent: 5
+  saveanMotor: {fileID: 11400000, guid: 29071916931b5ea43a5fd5e7672a30d6, type: 2}
 --- !u!1 &365630267071394114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1309,7 @@ MonoBehaviour:
   beratBarang: 100
   beratBarangCurrent: 0
   NgitungBerat: 0
+  saveanMotor: {fileID: 11400000, guid: 29071916931b5ea43a5fd5e7672a30d6, type: 2}
 --- !u!1 &863797532001842648
 GameObject:
   m_ObjectHideFlags: 0

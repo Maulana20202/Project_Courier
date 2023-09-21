@@ -47,12 +47,14 @@ public class MotorController : MonoBehaviour
 
     //value Bensin Dan Kondisi Kendaraan
 
+    [Header("Bensin value")]
 
     public float BensinValueMin = 100;
     public float BensinValueMax = 100;
     public float BensinValue = 100;
 
-
+    [Header("Kondisi Kendaraan value")]
+    
     public float KondisiKendaraanValueMin = 100;
     public float KondisiKendaraanValueMax = 100;
 
@@ -66,11 +68,17 @@ public class MotorController : MonoBehaviour
 
     public SaveanValueMotor saveanMotor;
 
+    //Manager UI
+
+    public ManagerUI managerUI;
+
     // Start is called before the first frame update
     void Start()
     {
         BensinValueMax = saveanMotor.BensinValueMax;
         KondisiKendaraanValueMax = saveanMotor.KondisiValueMax;
+
+        managerUI = FindAnyObjectByType<ManagerUI>();
     }
 
     // Update is called once per frame
@@ -94,6 +102,8 @@ public class MotorController : MonoBehaviour
 
         saveanMotor.BensinValueMax = BensinValueMax;
         saveanMotor.KondisiValueMax = KondisiKendaraanValueMax;
+
+        SliderUI();
        
     }
 
@@ -209,5 +219,15 @@ public class MotorController : MonoBehaviour
         if (Mathf.Abs(carVelocity.z) >= 1){
             KondisiKendaraanValue -= 5;
         }
+    }
+
+    void SliderUI(){
+        managerUI.UIBensinSlider.maxValue = BensinValueMax;
+
+        managerUI.UIBensinSlider.value = BensinValue;
+
+        managerUI.UIKondisiSlider.maxValue = KondisiKendaraanValueMax;
+
+        managerUI.UIKondisiSlider.value = KondisiKendaraanValue;
     }
 }

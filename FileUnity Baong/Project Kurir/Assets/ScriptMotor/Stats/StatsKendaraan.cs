@@ -29,6 +29,10 @@ public class StatsKendaraan : MonoBehaviour
         UpgradingMuatan();
     }
 
+    public void BaseMengisiBensin(){
+        MengisiBensin();
+    }
+
     protected virtual void UpgradingBensin(){
 
     }
@@ -38,6 +42,10 @@ public class StatsKendaraan : MonoBehaviour
     }
 
     protected virtual void UpgradingMuatan(){
+
+    }
+
+    protected virtual void MengisiBensin(){
 
     }
 }

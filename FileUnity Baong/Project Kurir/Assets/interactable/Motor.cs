@@ -24,6 +24,8 @@ public class Motor : interactable
     public Transform mobil;
 
     public bool NaikMobil;
+    
+    public ManagerUI managerUI;
 
     // Start is called before the first frame update
     [System.Obsolete]
@@ -36,6 +38,7 @@ public class Motor : interactable
         
         camUtamaParent = GameObject.FindWithTag("MainCamera");
 
+        managerUI = FindAnyObjectByType<ManagerUI>();
         
         
 
@@ -65,6 +68,7 @@ public class Motor : interactable
                 PlayerInteract.instance.player.SetActive(true);
                 Rider.SetActive(false);
                 Debug.Log("kepencet Lgi");
+                managerUI.WalkingUI();
 
                 
 
@@ -101,9 +105,11 @@ public class Motor : interactable
         Rider.SetActive(true);
         PlayerInteract.instance.player.SetActive(false);
         PlayerInteract.instance.playerUI.UpdateText(string.Empty);
+        managerUI.RidingUI();
         yield return new WaitForSeconds(1f);
         controllerMobil.Driving = true;
         NaikMobil = true;
+        
 
 
 

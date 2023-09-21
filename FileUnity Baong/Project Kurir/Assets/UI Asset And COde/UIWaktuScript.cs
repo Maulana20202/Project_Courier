@@ -11,7 +11,7 @@ public class UIWaktuScript : MonoBehaviour
 
     bool display;
 
-    public int TIMESCALE = 100;
+    public int TIMESCALE = 10;
 
     public TextMeshProUGUI clockText;
     public TextMeshProUGUI dayText;
