@@ -14,6 +14,8 @@ public class TrunkController : MonoBehaviour
 
     public TrunkManager trunkManager;
 
+    public Trunk trunk;
+
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -22,11 +24,14 @@ public class TrunkController : MonoBehaviour
     {
         boxstatsContainer = FindAnyObjectByType<BoxStatsContainer>();
         trunkManager = GameObject.FindGameObjectWithTag("MainTrunk").GetComponent<TrunkManager>();
+        trunk = GameObject.FindGameObjectWithTag("MainTrunk").GetComponent<Trunk>();
     }
     public void PickUpItem()
     {
         boxstatsContainer.PickUpBox(boxstats, nyawaBarang);
         trunkManager.Remove(boxstats,nyawaBarang);
+
+        trunk.NgitungBerat = true;
 
         UIInventoryContainer.instance.Clear();
         Destroy(gameObject);

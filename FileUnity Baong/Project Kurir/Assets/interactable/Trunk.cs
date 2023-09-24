@@ -53,7 +53,7 @@ public class Trunk : interactable
 
 
         if(NgitungBerat == true){
-            if(trunkManager.Items.Count == 0){
+            if(trunkManager.Items.Count >= 0){
                 int CheckPoint = trunkManager.Items.Count;
                 int CheckPointMinus = CheckPoint -= 1;
                 beratBarangCurrent = 0;

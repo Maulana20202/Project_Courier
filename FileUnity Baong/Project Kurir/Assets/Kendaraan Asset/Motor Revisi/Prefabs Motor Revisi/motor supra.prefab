@@ -198,6 +198,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   mobil: {fileID: 8189706927774127132}
   NaikMobil: 0
+  managerUI: {fileID: 0}
 --- !u!1 &141184614250356673
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +857,7 @@ MonoBehaviour:
   WaktuNgurang: 5
   WaktuNgurangCurrent: 5
   saveanMotor: {fileID: 11400000, guid: 29071916931b5ea43a5fd5e7672a30d6, type: 2}
+  managerUI: {fileID: 0}
 --- !u!1 &365630267071394114
 GameObject:
   m_ObjectHideFlags: 0
