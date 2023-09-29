@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JumlahUang: 0
   MisiYangAktif: 0
-  KendaraanYangDigunakan: {fileID: 0}
+  KendaraanYangDigunakan: {fileID: 353271582991880970, guid: b9fdfc63126b6de4787594ecaeb4adf7, type: 3}
   jam: 0
