@@ -646,7 +646,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.37, y: 0.461, z: 34.474}
-  m_LocalScale: {x: 1.8327252, y: 1.8327252, z: 1.8327252}
+  m_LocalScale: {x: 1.38, y: 1.38, z: 1.38}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6681192816322509435}
@@ -742,7 +742,7 @@ MonoBehaviour:
   maxSpeed: 70
   maxMundur: 10
   acceleration: 10
-  turn: -30
+  turn: -20
   rb: {fileID: 1715618883890623081}
   carBody: {fileID: 7513743799683584236}
   animateMundur: {fileID: 6665154286854569824}
@@ -844,7 +844,7 @@ MonoBehaviour:
   text: {fileID: 0}
   Driving: 0
   carVelocity: {x: 0, y: 0, z: 0}
-  BodyTilt: 50
+  BodyTilt: 70
   radius: 0
   horizontalInput: 0
   verticalInput: 0

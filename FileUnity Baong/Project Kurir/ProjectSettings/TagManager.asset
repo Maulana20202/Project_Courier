@@ -9,6 +9,7 @@ TagManager:
   - MainTrunk
   - Bgm
   - Kendaraan
+  - Main Camera
   layers:
   - Default
   - TransparentFX
