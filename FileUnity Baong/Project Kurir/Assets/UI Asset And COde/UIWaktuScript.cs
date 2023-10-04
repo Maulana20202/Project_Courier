@@ -27,12 +27,22 @@ public class UIWaktuScript : MonoBehaviour
 
     void Awake(){
 
-        Instance = this;
+        
+        if(Instance == null){
+
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
             month = 1;
             day = 1;
             year = 2021;
             hour = 5;
             minute = 0;
+
+        } else {
+            Destroy(gameObject);
+        }
+
+            
     }
     void Start()
     {

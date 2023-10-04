@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour
         } else {
             Destroy(gameObject);
         }
-        Audio = GameObject.FindWithTag("Bgm").GetComponent<AudioSource>();
+        Audio = GetComponentInChildren<AudioSource>();
     }
     void Start()
     {

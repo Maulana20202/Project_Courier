@@ -10,6 +10,7 @@ TagManager:
   - Bgm
   - Kendaraan
   - Main Camera
+  - Matahari
   layers:
   - Default
   - TransparentFX

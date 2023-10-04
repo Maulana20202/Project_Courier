@@ -162,9 +162,13 @@ public class PlayerMovement : MonoBehaviour
             if (grounded){
                 rb.AddForce(this.transform.up * JumpForce, ForceMode.Impulse);
                 Debug.Log("Lompat");
-            }
+            } 
             
         }
+
+        if (!grounded) {
+                rb.AddForce(this.transform.up * -1, ForceMode.Impulse);
+            }
 
 
     }

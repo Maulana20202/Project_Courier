@@ -17,6 +17,9 @@ public class LightingManager : MonoBehaviour
 
     private void Update()
     {
+
+        DirectionalLight = GameObject.FindWithTag("Matahari").GetComponent<Light>();
+
         if (Preset == null)
             return;
 
@@ -53,6 +56,8 @@ public class LightingManager : MonoBehaviour
     }
 
     //Try to find a directional light to use if we haven't set one
+    
+    
     private void OnValidate()
     {
         if (DirectionalLight != null)
@@ -77,4 +82,5 @@ public class LightingManager : MonoBehaviour
             }
         }
     }
+    
 }

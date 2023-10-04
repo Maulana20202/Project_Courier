@@ -64,5 +64,7 @@ public class UpgradingSystem : MonoBehaviour
         Cursor.visible = false;
         playerMovement.enabled = true;
         playerCameraRotation.enabled = true;
+
+        Debug.Log("Kepencet");
     }
 }
