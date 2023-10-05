@@ -702,6 +702,8 @@ MonoBehaviour:
   UpgradeBensin: 0
   UpgradeKondisi: 0
   UpgradeMuatan: 0
+  SelisihBensin: 0
+  HargaBensin: 10000
   motorStats: {fileID: 2462610406365822916}
   BagasiMotor: {fileID: 0}
 --- !u!136 &7925240340041338126

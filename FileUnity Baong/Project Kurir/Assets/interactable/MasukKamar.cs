@@ -25,7 +25,7 @@ public class MasukKamar : interactable
     }
 
     protected override void Interact(){
-        if(UIWaktuScript.Instance.hour >= 8){
+        if(UIWaktuScript.Instance.hour >= 6){
 
             MainMenu.SetActive(false);
             LoadingScreen.SetActive(true);

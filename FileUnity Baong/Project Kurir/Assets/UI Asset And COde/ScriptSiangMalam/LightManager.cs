@@ -18,7 +18,10 @@ public class LightingManager : MonoBehaviour
     private void Update()
     {
 
-        DirectionalLight = GameObject.FindWithTag("Matahari").GetComponent<Light>();
+        if(GameObject.FindWithTag("Matahari") != null){
+            DirectionalLight = GameObject.FindWithTag("Matahari").GetComponent<Light>();
+        }
+       
 
         if (Preset == null)
             return;
