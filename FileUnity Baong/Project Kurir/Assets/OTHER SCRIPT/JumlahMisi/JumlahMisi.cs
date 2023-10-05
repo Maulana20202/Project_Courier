@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using TMPro;
 
 public class JumlahMisi : MonoBehaviour
 {
@@ -20,6 +19,8 @@ public class JumlahMisi : MonoBehaviour
     public TextMeshProUGUI TextJumlahMisiCurrent;
 
     public TextMeshProUGUI TextJumlahMission;
+
+    public MissionSummon misiSummon;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +35,9 @@ public class JumlahMisi : MonoBehaviour
 
         TextJumlahMisiCurrent.text = JumlahMisiCurrentText;
         TextJumlahMission.text = jumlahMissionText;
+
+        if(JumlahMisiCurrent <= 0){
+            misiSummon.MisiAktif = 0;
+        }
      }
 }

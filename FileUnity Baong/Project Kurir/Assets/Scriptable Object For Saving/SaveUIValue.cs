@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SaveUIValue : ScriptableObject
 {
-    public int JumlahUang;
+    public float JumlahUang;
 
     public int MisiYangAktif;
 

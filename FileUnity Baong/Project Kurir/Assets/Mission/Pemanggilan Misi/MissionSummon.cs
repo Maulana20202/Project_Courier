@@ -8,6 +8,8 @@ public class MissionSummon : MonoBehaviour
 
     public SaveUIValue SaveUI;
 
+    
+
     public int MisiAktif;
     void Start()
     {
@@ -17,6 +19,13 @@ public class MissionSummon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Misi[MisiAktif].enabled = true;
+        if(MisiAktif != 0){
+            Misi[MisiAktif].enabled = true;
+        }
+
+        if(MisiAktif == 0){
+            SaveUI.MisiYangAktif = MisiAktif;
+        }
+        
     }
 }

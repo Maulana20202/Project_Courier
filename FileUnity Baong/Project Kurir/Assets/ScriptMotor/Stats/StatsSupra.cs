@@ -44,7 +44,19 @@ public class StatsSupra : StatsKendaraan
 
     protected override void MengisiBensin(){
         if(motorStats.BensinValue < motorStats.BensinValueMax){
+
+            float SelisihBensin;
+
+            float Harga;
+
+            SelisihBensin = motorStats.BensinValueMax - motorStats.BensinValue;
+
+            Harga = SelisihBensin / 100 * HargaBensin;
+
+
             motorStats.BensinValue = motorStats.BensinValueMax;
+
+            UIDuitScript.instance.JumlahUang -= Harga;
         }
     }
 }

@@ -16,7 +16,7 @@ public class AmbilMisi : interactable
     // Start is called before the first frame update
     void Start()
     {
-        
+        AngkaYangTerpilih = SaveUI.MisiYangAktif;
     }
 
     // Update is called once per frame
@@ -29,8 +29,14 @@ public class AmbilMisi : interactable
 
     protected override void Interact()
     {
-        RandomAngka = Random.Range(0, ScriptMisi.Count);
+        if(AngkaYangTerpilih == 0){
+            
+            RandomAngka = Random.Range(1, ScriptMisi.Count);
 
-        ScriptMisi[RandomAngka].enabled = true;
+            ScriptMisi[RandomAngka].enabled = true;
+        } else {
+            Debug.Log("Gabisa Dah Milih");
+        }
+       
     }
 }

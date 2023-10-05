@@ -28,41 +28,41 @@ public class PenerimaBox : interactable
 
             if (BoxStatsContainer.Instance.nyawaBarang >= 100)
             {
-                UIDuitScript.instance.JumlahUang += 20000;
+                UIDuitScript.instance.JumlahUang += 20000f;
                 JumlahMisi.instance.JumlahMisiCurrent -= 1;
                 
 
             }
             else if(BoxStatsContainer.Instance.nyawaBarang >= 80)
             {
-                UIDuitScript.instance.JumlahUang += 17000;
+                UIDuitScript.instance.JumlahUang += 17000f;
                 JumlahMisi.instance.JumlahMisiCurrent -= 1;
 
             } 
             else if (BoxStatsContainer.Instance.nyawaBarang >= 80)
             {
-                UIDuitScript.instance.JumlahUang += 15000;
+                UIDuitScript.instance.JumlahUang += 15000f;
                 JumlahMisi.instance.JumlahMisiCurrent -= 1;
 
             }
 
             else if (BoxStatsContainer.Instance.nyawaBarang >= 60)
             {
-                UIDuitScript.instance.JumlahUang += 10000;
+                UIDuitScript.instance.JumlahUang += 10000f;
                 JumlahMisi.instance.JumlahMisiCurrent -= 1;
 
             }
 
             else if (BoxStatsContainer.Instance.nyawaBarang >= 40)
             {
-                UIDuitScript.instance.JumlahUang += 5000;
+                UIDuitScript.instance.JumlahUang += 5000f;
                 JumlahMisi.instance.JumlahMisiCurrent -= 1;
 
             }
 
             else if (BoxStatsContainer.Instance.nyawaBarang >= 20)
             {
-                UIDuitScript.instance.JumlahUang += 0;
+                UIDuitScript.instance.JumlahUang += 0f;
                JumlahMisi.instance.JumlahMisiCurrent -= 1;
 
             }

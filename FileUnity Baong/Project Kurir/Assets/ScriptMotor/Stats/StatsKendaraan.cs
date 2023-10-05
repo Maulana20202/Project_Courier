@@ -16,6 +16,10 @@ public class StatsKendaraan : MonoBehaviour
     public bool UpgradeKondisi;
 
     public bool UpgradeMuatan;
+
+    public float SelisihBensin;
+
+    public float HargaBensin = 10000f;
     // Start is called before the first frame update
     public void BaseUpgradingBensin(){
         UpgradingBensin();

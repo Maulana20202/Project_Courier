@@ -11,7 +11,7 @@ public class UIDuitScript : MonoBehaviour
 
     public static UIDuitScript instance;
 
-    public int JumlahUang;
+    public float JumlahUang;
 
 
     public SaveUIValue SaveUI;
