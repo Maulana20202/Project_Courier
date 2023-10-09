@@ -44,11 +44,11 @@ MonoBehaviour:
     m_NumAlphaKeys: 5
   DirectionalColor:
     serializedVersion: 2
-    key0: {r: 0.54561234, g: 0.56929994, b: 0.5754717, a: 1}
+    key0: {r: 0, g: 0.75, b: 1, a: 1}
     key1: {r: 0.9811321, g: 0.61371547, b: 0.26379493, a: 1}
     key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 0.69803923, g: 0.36862746, b: 0.05490196, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0.7490196, b: 1, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
@@ -56,7 +56,7 @@ MonoBehaviour:
     ctime1: 10794
     ctime2: 33346
     ctime3: 56283
-    ctime4: 65535
+    ctime4: 64571
     ctime5: 0
     ctime6: 0
     ctime7: 0
