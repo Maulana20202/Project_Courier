@@ -11,7 +11,7 @@ public class NPCScript : MonoBehaviour
 
     public int Index;
 
-    public float MinimumDistance = 1;
+    public float MinimumDistance = 2;
     // Start is called before the first frame update
     void Start()
     {

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SaveUI
   m_EditorClassIdentifier: 
   JumlahUang: 56000
-  MisiYangAktif: 1
+  MisiYangAktif: 2
   KendaraanYangDigunakan: {fileID: 0}
   jam: 0

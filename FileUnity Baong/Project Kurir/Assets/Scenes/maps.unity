@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 153240023}
   - component: {fileID: 153240025}
   - component: {fileID: 153240024}
+  - component: {fileID: 153240026}
   m_Layer: 0
   m_Name: ListMisi
   m_TagString: Untagged
@@ -393,8 +394,40 @@ MonoBehaviour:
   Misi:
   - {fileID: 0}
   - {fileID: 153240024}
+  - {fileID: 153240026}
   SaveUI: {fileID: 11400000, guid: a4e7b3457d209b548a9608949db3c803, type: 2}
-  MisiAktif: 1
+  MisiAktif: 0
+--- !u!114 &153240026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153240022}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255deaedfc4e54148a41b836706cd9b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Box:
+  - {fileID: 11400000, guid: b1ee0d780069d824e954cd6603ad7de1, type: 2}
+  - {fileID: 11400000, guid: e9d4260a6a59f134981938941bc677a9, type: 2}
+  - {fileID: 11400000, guid: b79b75cdcb6fffc42a99e9948a475c32, type: 2}
+  - {fileID: 11400000, guid: 4e96eb9b90a90ba44a4e6813f0ccf8e5, type: 2}
+  - {fileID: 11400000, guid: 44c4e3dacef1e8a4dabc46aa582e7ab7, type: 2}
+  Penerima:
+  - {fileID: 6896170127751551258, guid: 019a4627fc06f044684302137a11ee9b, type: 3}
+  - {fileID: 6896170127751551258, guid: 019a4627fc06f044684302137a11ee9b, type: 3}
+  - {fileID: 6896170127751551258, guid: 019a4627fc06f044684302137a11ee9b, type: 3}
+  - {fileID: 6896170127751551258, guid: 019a4627fc06f044684302137a11ee9b, type: 3}
+  - {fileID: 6896170127751551258, guid: 019a4627fc06f044684302137a11ee9b, type: 3}
+  Lokasi_Penerima:
+  - {fileID: 1552903122}
+  - {fileID: 932039973}
+  - {fileID: 28296703}
+  - {fileID: 821593862}
+  - {fileID: 1986244958}
+  JumlahMison: 0
 --- !u!1 &184789603
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,78 +692,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1183597379}
   m_LocalEulerAnglesHint: {x: 0, y: -14.832, z: 0}
---- !u!1 &319727255
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 319727256}
-  - component: {fileID: 319727258}
-  - component: {fileID: 319727259}
-  m_Layer: 5
-  m_Name: MinimapRT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &319727256
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319727255}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1678805807}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -720.22, y: -253.63}
-  m_SizeDelta: {x: 479.58, y: 572.74}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &319727258
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319727255}
-  m_CullTransparentMesh: 1
---- !u!114 &319727259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319727255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 5f4833064bfd21a4e80ed7c4c2fb272e, type: 2}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!1 &340372981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,6 +2528,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3071176514706003647, guid: 5603c45dfa885994088b45e2426e558a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 307.3863
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071176514706003647, guid: 5603c45dfa885994088b45e2426e558a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 352.795
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071176514706003647, guid: 5603c45dfa885994088b45e2426e558a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -806.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071176514706003647, guid: 5603c45dfa885994088b45e2426e558a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -363.60248
+      objectReference: {fileID: 0}
     - target: {fileID: 4173043444152609948, guid: 5603c45dfa885994088b45e2426e558a, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2593,10 +2570,7 @@ PrefabInstance:
       objectReference: {fileID: 1376110762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 203613005280666252, guid: 5603c45dfa885994088b45e2426e558a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 319727256}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5603c45dfa885994088b45e2426e558a, type: 3}
 --- !u!95 &1808886024 stripped
@@ -2632,7 +2606,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1891803281}
   - component: {fileID: 1891803284}
-  - component: {fileID: 1891803283}
   - component: {fileID: 1891803282}
   - component: {fileID: 1891803285}
   m_Layer: 0
@@ -2701,14 +2674,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1891803283
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891803280}
-  m_Enabled: 1
 --- !u!20 &1891803284
 Camera:
   m_ObjectHideFlags: 0
