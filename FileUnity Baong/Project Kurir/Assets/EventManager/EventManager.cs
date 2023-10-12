@@ -30,7 +30,7 @@ public class EventManager : MonoBehaviour
     {
         //Event Terlambat Pulang
 
-        if(UIWaktuScript.Instance.hour == 6){
+        if(UIWaktuScript.Instance.hour == 20){
             
             SaveTelat.Telat = true;
             StartCoroutine(LoadingScreenWait(1));

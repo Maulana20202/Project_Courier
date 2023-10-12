@@ -9,6 +9,11 @@ public class StayInside: MonoBehaviour
 	public float MinimapSize;
 	Vector3 TempV3;
 
+
+	void Start(){
+		MinimapCam = GameObject.FindWithTag("MiniCam").transform;
+		MinimapSize = 30;
+	}
 	void Update () {
 		TempV3 = transform.parent.transform.position;
 		TempV3.y = transform.position.y;

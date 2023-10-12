@@ -7,23 +7,30 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cloud Shader
-  m_Shader: {fileID: -6465566751694194690, guid: da2a44ed69c12d84e8f3372df7a51223, type: 3}
+  m_Name: Intersaction
+  m_Shader: {fileID: -6465566751694194690, guid: 0c4d3949b9ab0e74285b77dbc7a36a0e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses: []
+    RenderType: Transparent
+  disabledShaderPasses:
+  - SHADOWCASTER
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Maintext:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -42,28 +49,26 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _CastShadows: 1
-    - _CloudPower: 2.57
-    - _Cloud_Scale: 5000
-    - _CloudsAlpha: 1
-    - _Cull: 2
-    - _DistortScale: 5000
-    - _DstBlend: 0
+    - _CastShadows: 0
+    - _Cull: 0
+    - _DstBlend: 10
+    - _IntersectionDepth: 0.89
+    - _NoiseScale: 5
+    - _NoiseSpeed: 0.47
+    - _NoiseStrength: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SrcBlend: 1
-    - _Surface: 0
+    - _SrcBlend: 5
+    - _Surface: 1
     - _WorkflowMode: 1
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _CloudSpeed: {r: 0, g: 0.0003, b: 0, a: 0}
-    - _CloudsColor: {r: 61.131683, g: 61.131683, b: 61.131683, a: 1}
-    - _DistortSpeed: {r: 0, g: 0.0003, b: 0, a: 0}
+    - _IntersectionColor: {r: 0, g: 388.68045, b: 766.99603, a: 0.5882353}
   m_BuildTextureStacks: []
---- !u!114 &669855933016955445
+--- !u!114 &5466454168806314607
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

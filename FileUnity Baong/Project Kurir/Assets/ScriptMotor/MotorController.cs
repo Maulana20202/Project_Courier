@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.UIElements.Experimental;
+using System.Diagnostics;
 
 public class MotorController : MonoBehaviour
 {
@@ -72,6 +73,10 @@ public class MotorController : MonoBehaviour
 
     public ManagerUI managerUI;
 
+    //Trunk Manager
+
+    public TrunkManager trunkManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +84,8 @@ public class MotorController : MonoBehaviour
         KondisiKendaraanValueMax = saveanMotor.KondisiValueMax;
 
         managerUI = FindAnyObjectByType<ManagerUI>();
+
+        trunkManager = GetComponentInChildren<TrunkManager>();
     }
 
     // Update is called once per frame
@@ -219,6 +226,8 @@ public class MotorController : MonoBehaviour
         if (Mathf.Abs(carVelocity.z) >= 1){
             KondisiKendaraanValue -= 5;
         }
+
+        trunkManager.MinusNyawa();
     }
 
     void SliderUI(){

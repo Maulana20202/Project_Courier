@@ -11,6 +11,7 @@ TagManager:
   - Kendaraan
   - Main Camera
   - Matahari
+  - MiniCam
   layers:
   - Default
   - TransparentFX
