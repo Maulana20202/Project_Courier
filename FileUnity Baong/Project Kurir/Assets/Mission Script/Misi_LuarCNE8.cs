@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Misi_1_LuarCNE : MissionScriptBase
+public class Misi_LuarCNE8 : MissionScriptBase
 {
     
     void Awake(){

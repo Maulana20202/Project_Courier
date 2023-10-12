@@ -1496,7 +1496,7 @@ GameObject:
   - component: {fileID: 609053966}
   - component: {fileID: 609053965}
   m_Layer: 5
-  m_Name: Video Bokep Bag 2
+  m_Name: Video Bagus Bag 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1955,7 +1955,7 @@ GameObject:
   - component: {fileID: 888951442}
   - component: {fileID: 888951441}
   m_Layer: 5
-  m_Name: Video Bokep
+  m_Name: Video bagus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2266,10 +2266,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1994258890}
   - {fileID: 888951440}
   - {fileID: 609053964}
   - {fileID: 651426275}
-  - {fileID: 1994258890}
   - {fileID: 96793358}
   - {fileID: 1831385763}
   - {fileID: 1651045108}
@@ -3230,6 +3230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882956788}
   - component: {fileID: 1882956787}
+  - component: {fileID: 1882956789}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3314,6 +3315,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1882956789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882956786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1884565571
 GameObject:
   m_ObjectHideFlags: 0
