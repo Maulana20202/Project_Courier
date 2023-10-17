@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -34,6 +33,9 @@ public class Mobil_Script : MonoBehaviour
 
 
     public float RayDistance;
+
+
+    public WaypointAja waypoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,10 +65,11 @@ public class Mobil_Script : MonoBehaviour
     void FixedUpdate(){
 
         CarVelocity = GetComponent<Rigidbody>().transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity);
-            
-        Roam();
+        
+        
         NgadepPoint();
         Drive();
+        Roam();
 
         /*frontLeftTransform.localRotation = Quaternion.Slerp(frontLeftTransform.localRotation,Quaternion.Euler(10f, frontLeftTransform.localRotation.eulerAngles.y , frontLeftTransform.localRotation.eulerAngles.z) , Agent.speed);
         frontRightTransform.localRotation = Quaternion.Slerp(frontRightTransform.localRotation,Quaternion.Euler(10f, frontLeftTransform.localRotation.eulerAngles.y, frontRightTransform.localRotation.eulerAngles.z) , Agent.speed);
@@ -79,18 +82,26 @@ public class Mobil_Script : MonoBehaviour
 
     void Roam(){
 
-     if(Vector3.Distance(transform.position, PathPoints[Index].position) < MinimumDistance){
-            if(Index >= 0 && Index < PathPoints.Length - 1){         
-                Index += 1;
-            } else {
-                Index = 0;
-            }
+
+       
+     if(Vector3.Distance(transform.position, waypoint.transform.position) < MinimumDistance){
+
+         if(waypoint.perempatan != null && waypoint.perempatan.Count > 0){
+
+            int RandomAngka = Random.Range(0, waypoint.perempatan.Count);
+
+            waypoint = waypoint.perempatan[RandomAngka];
+
+        } else {
+             waypoint = waypoint.nextWaypoint;
+        }
+           
         }
     }
 
     void NgadepPoint(){
 
-        Vector3 RelativeVector = transform.InverseTransformPoint(PathPoints[Index].position);
+        Vector3 RelativeVector = transform.InverseTransformPoint(waypoint.transform.position);
         float newSteer = RelativeVector.x / RelativeVector.magnitude * maxSteerAngle;
         frontRight.steerAngle = newSteer;
         frontLeft.steerAngle = newSteer;
