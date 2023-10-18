@@ -34,6 +34,8 @@ public class Mobil_Script : MonoBehaviour
 
     public float RayDistance;
 
+    public LayerMask mask;
+
 
     public WaypointAja waypoint;
     // Start is called before the first frame update
@@ -57,6 +59,12 @@ public class Mobil_Script : MonoBehaviour
             maxBrakeTorque = 700f;
         } else {
             maxTorque = 100f;
+            maxBrakeTorque = 0f;
+        }
+
+        if(Physics.Raycast(r, out hitInfo, RayDistance, mask)){
+            maxBrakeTorque = 100f;
+        } else {
             maxBrakeTorque = 0f;
         }
 

@@ -114,7 +114,10 @@ public class WaypointManagingWindow : EditorWindow
         WaypointAja selectedWaypoint = Selection.activeGameObject.GetComponent<WaypointAja>();
 
         waypointObject.transform.position = selectedWaypoint.transform.position;
+        waypointObject.transform.rotation = selectedWaypoint.transform.rotation;
         waypointObject.transform.forward = selectedWaypoint.transform.forward;
+
+        newWaypoint.width = selectedWaypoint.width;
 
         newWaypoint.previousWaypoint = selectedWaypoint;
 

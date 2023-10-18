@@ -798,10 +798,11 @@ MonoBehaviour:
   frontLeft: {fileID: 3220236523913931566}
   backRight: {fileID: 3471357194152690801}
   backLeft: {fileID: 1553445113297887850}
-  maxSteerAngle: 40
-  maxTorque: 100
+  maxSteerAngle: 50
+  maxTorque: 20
   maxBrakeTorque: 0
-  RayDistance: 10
+  RayDistance: 5
+  waypoint: {fileID: 0}
 --- !u!1 &5578922698625954724
 GameObject:
   m_ObjectHideFlags: 0
