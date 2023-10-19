@@ -16,6 +16,10 @@ public class TrunkManager : MonoBehaviour
     public Transform ItemContent;
     public GameObject InventoryItem;
 
+    public float CountDown = 5f;
+
+    public float CountDownCurrent;
+
     public UIInventoryContainer InventoryContainer;
 
     public TrunkController[] trunkControllers;
@@ -38,6 +42,8 @@ public class TrunkManager : MonoBehaviour
             nyawaBarang = saveanList.ListNyawaBarang;
         }
 
+        CountDownCurrent = CountDown;
+
     }
 
 
@@ -45,6 +51,19 @@ public class TrunkManager : MonoBehaviour
         if (Items != null){
             saveanList.ListBagasi = Items;
             saveanList.ListNyawaBarang = nyawaBarang;
+        }
+
+        if(HujanTrigger.Instance.HujanMulai){
+
+            if(CountDownCurrent <= 0){
+                for(int i = 0 ; i < nyawaBarang.Count; i++){
+                nyawaBarang[i] -= 3;
+                }
+                CountDownCurrent = CountDown;
+            } else {
+                CountDownCurrent -= Time.deltaTime;
+            }
+            
         }
         
     }

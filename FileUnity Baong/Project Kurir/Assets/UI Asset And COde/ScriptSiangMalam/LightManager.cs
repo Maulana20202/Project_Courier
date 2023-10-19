@@ -7,6 +7,8 @@ public class LightingManager : MonoBehaviour
     [SerializeField] private Light DirectionalLight;
     [SerializeField] private Light DirectionalLight2;
     [SerializeField] private DirectionalColorPreset Preset;
+
+    [SerializeField] private DirectionalColorPreset PresetHujan;
     //Variables
     [SerializeField, Range(0,86400)] private float TimeOfDay;
 
@@ -42,14 +44,25 @@ public class LightingManager : MonoBehaviour
 
     private void UpdateLighting(float timePercent)
     {
+        if(HujanTrigger.Instance != null && HujanTrigger.Instance.HujanMulai != true){
+            RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
+            RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercent);
+        } else {
+            RenderSettings.ambientLight = PresetHujan.AmbientColor.Evaluate(timePercent);
+            RenderSettings.fogColor = PresetHujan.FogColor.Evaluate(timePercent);
+        }
         //Set ambient and fog
-        RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
-        RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercent);
+       
 
         //If the directional light is set then rotate and set it's color, I actually rarely use the rotation because it casts tall shadows unless you clamp the value
         if (DirectionalLight != null)
         {
-            DirectionalLight.color = Preset.DirectionalColor.Evaluate(timePercent);
+            if(HujanTrigger.Instance != null && HujanTrigger.Instance.HujanMulai != true){
+                DirectionalLight.color = Preset.DirectionalColor.Evaluate(timePercent);
+            } else {
+                DirectionalLight.color = PresetHujan.DirectionalColor.Evaluate(timePercent);
+            }
+            
 
             DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timePercent * 360f) - 90f, 170f, 0));
             
