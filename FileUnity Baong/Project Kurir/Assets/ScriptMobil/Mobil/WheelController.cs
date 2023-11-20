@@ -136,6 +136,8 @@ public class WheelController : MonoBehaviour
 
         saveanMotor.BensinValueMax = BensinValueMax;
         saveanMotor.KondisiValueMax = KondisiKendaraanValueMax;
+        saveanMotor.BensinCurrent = BensinValue;
+        saveanMotor.KondisiCurrent = KondisiKendaraanValue;
 
         SliderUI();
 

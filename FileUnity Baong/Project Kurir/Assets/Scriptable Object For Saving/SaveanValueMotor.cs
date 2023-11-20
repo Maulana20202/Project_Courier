@@ -15,4 +15,14 @@ public class SaveanValueMotor : ScriptableObject
     public float HargaKondisi;
 
     public float HargaMuatan;
+
+    public int UpgradeBensinValue;
+
+    public int UpgradeKondisiValue;
+
+    public int UpgradeMuatanValue;
+
+    public float BensinCurrent;
+
+    public float KondisiCurrent;
 }

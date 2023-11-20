@@ -21,4 +21,4 @@ MonoBehaviour:
   GambarBarangToolTip: {fileID: 21300000, guid: 960e626aa8ab4fb4cb59ee974419e756, type: 3}
   nyawaBarang: 100
   jenis: 1
-  prefabsBox: {fileID: 0}
+  prefabsBox: {fileID: 3626038794543931281, guid: 950fd64af5a507045942eccacf37ba8c, type: 3}

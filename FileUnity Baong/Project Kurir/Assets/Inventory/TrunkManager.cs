@@ -103,10 +103,8 @@ public class TrunkManager : MonoBehaviour
         foreach (var boxStats in Items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var ItemName = obj.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
             var ItemIcon = obj.transform.Find("ItemImage").GetComponent<Image>();
 
-            ItemName.text = boxStats.NamaBox.ToString();
             ItemIcon.sprite = boxStats.GambarBarang;
         }
 

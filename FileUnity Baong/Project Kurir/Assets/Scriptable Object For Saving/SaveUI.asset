@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9882dff90d71faa47b3b81e2c941dc4e, type: 3}
   m_Name: SaveUI
   m_EditorClassIdentifier: 
-  JumlahUang: 1e+13
+  JumlahUang: 98000
   MisiYangAktif: 0
-  KendaraanYangDigunakan: {fileID: 6606693018749779602, guid: b838d388ccb182044ae609d6f5f4c67f, type: 3}
+  KendaraanYangDigunakan: {fileID: 0}
   jam: 0

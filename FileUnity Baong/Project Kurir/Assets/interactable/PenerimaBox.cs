@@ -20,7 +20,9 @@ public class PenerimaBox : interactable
     void Start()
     {
         int RandomAngka = Random.Range(0,Penerima.Count);
-        GameObject Kukingkang = Instantiate(Penerima[RandomAngka], TempatSpawn.position, TempatSpawn.rotation);
+        if(TempatSpawn != null){
+            GameObject Kukingkang = Instantiate(Penerima[RandomAngka], TempatSpawn.position, TempatSpawn.rotation,this.transform);
+        }       
         Atasan.GetComponent<SpriteRenderer>().sprite = box.GambarBarang;
         Icon.sprite = box.GambarIconMap;
     }

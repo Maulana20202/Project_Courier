@@ -36,8 +36,12 @@ public class JumlahMisi : MonoBehaviour
         TextJumlahMisiCurrent.text = JumlahMisiCurrentText;
         TextJumlahMission.text = jumlahMissionText;
 
-        /*if(JumlahMisiCurrent <= 0){
+    if(misiSummon.MisiAktif != 0){
+        if(JumlahMisiCurrent <= 0){
+            misiSummon.Misi[misiSummon.MisiAktif].enabled = false;
             misiSummon.MisiAktif = 0;
-        }*/
+        }
+    }
+        
      }
 }

@@ -13,4 +13,5 @@ public class SaveUIValue : ScriptableObject
     public GameObject KendaraanYangDigunakan;
 
     public float jam;
+
 }

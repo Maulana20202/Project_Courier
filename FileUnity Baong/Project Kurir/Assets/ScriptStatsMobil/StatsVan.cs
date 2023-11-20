@@ -29,6 +29,9 @@ public class StatsVan : StatsKendaraan
         HargaBensinCurrent = saveanHarga.HargaBensin;
         HargaKondisiCurrent = saveanHarga.HargaKondisi;
         HargaKapasitasCurrent = saveanHarga.HargaMuatan;
+        StatsBensin = saveanHarga.UpgradeBensinValue;
+        StatsKondisi = saveanHarga.UpgradeKondisiValue;
+        StatsMuatan = saveanHarga.UpgradeMuatanValue;
     }
 
    protected override void UpgradingBensin(){
@@ -40,6 +43,7 @@ public class StatsVan : StatsKendaraan
             UIDuitScript.instance.JumlahUang -= HargaBensinCurrent;
             HargaBensinCurrent += HargaUpgradeBensinMin * 0.25f;
             saveanHarga.HargaBensin = HargaBensinCurrent;
+            saveanHarga.UpgradeBensinValue = StatsBensin;
             }
         }
         
@@ -55,6 +59,7 @@ public class StatsVan : StatsKendaraan
                     UIDuitScript.instance.JumlahUang -= HargaKondisiCurrent;
                     HargaKondisiCurrent += HargaUpgradeKondisiMin * 0.25f;
                     saveanHarga.HargaKondisi = HargaKondisiCurrent;
+                    saveanHarga.UpgradeKondisiValue = StatsKondisi;
                 }
         
         }
@@ -69,6 +74,7 @@ public class StatsVan : StatsKendaraan
                 UIDuitScript.instance.JumlahUang -= HargaKapasitasCurrent;
                 HargaKapasitasCurrent += HargaUpgradeKapasitasMin * 0.25f;
                 saveanHarga.HargaMuatan = HargaKapasitasCurrent;
+                saveanHarga.UpgradeMuatanValue = StatsMuatan;
             }
         }
         

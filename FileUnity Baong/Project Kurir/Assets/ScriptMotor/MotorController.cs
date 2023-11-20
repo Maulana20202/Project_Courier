@@ -113,6 +113,8 @@ public class MotorController : MonoBehaviour
 
         saveanMotor.BensinValueMax = BensinValueMax;
         saveanMotor.KondisiValueMax = KondisiKendaraanValueMax;
+         saveanMotor.BensinCurrent = BensinValue;
+        saveanMotor.KondisiCurrent = KondisiKendaraanValue;
 
         SliderUI();
 

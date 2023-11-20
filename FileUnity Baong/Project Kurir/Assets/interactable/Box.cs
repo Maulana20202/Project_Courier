@@ -21,6 +21,8 @@ public class Box : interactable
 
     public bool IsMengambil;
 
+    private AmbilMisi ambilMisi;
+
     // Start is called before the first frame update
     [System.Obsolete]
     void Start()
@@ -30,8 +32,17 @@ public class Box : interactable
         rb = GetComponent<Rigidbody>();
         BC = GetComponent<BoxCollider>();
         thisBox = this.gameObject;
+        if(FindAnyObjectByType<AmbilMisi>() != null){
+            ambilMisi = FindAnyObjectByType<AmbilMisi>();
+        }
 
+        if(!BarangKetinggalan.Instance.SpawnKetinggalan){
+            BarangKetinggalan.Instance.barangKetinggalan.Add(boxStats.prefabsBox);
+        }
+        
         currentWaktu = Waktu;
+
+        
     }
 
     // Update is called once per frame
@@ -93,4 +104,5 @@ public class Box : interactable
         
 
     }
+
 }

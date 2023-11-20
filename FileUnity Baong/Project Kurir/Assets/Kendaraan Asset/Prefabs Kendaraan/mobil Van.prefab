@@ -1008,9 +1008,9 @@ MonoBehaviour:
   frontLeftTransform: {fileID: 8503319538823790122}
   backRightTransform: {fileID: 7885469321041842917}
   backLeftTransform: {fileID: 6452706319870549381}
-  acceleration: 500
+  acceleration: 200
   breakingForce: 2000
-  maxTurnAngle: 10
+  maxTurnAngle: 15
   currentAcceleration: 0
   currentBreakForce: 0
   currentTurnAngle: 0

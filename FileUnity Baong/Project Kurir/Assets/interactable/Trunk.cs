@@ -161,6 +161,7 @@ public class Trunk : interactable
                 BoxStatsContainer.Instance.nyawaBarang = 0;
                 NgitungBerat = true;
                 BoxStatsContainer.Instance.AngkutBarang = false;
+                BarangKetinggalan.Instance.barangKetinggalan.Remove(boxStats.prefabsBox);
 
                 }
 
