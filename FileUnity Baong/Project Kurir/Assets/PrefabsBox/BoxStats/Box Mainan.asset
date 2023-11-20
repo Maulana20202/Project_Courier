@@ -16,7 +16,8 @@ MonoBehaviour:
   Deskripsi: Box dengan isi mainan di dalamnya pecah belah
   id: 1
   Berat: 5
-  GambarBarang: {fileID: 0}
+  GambarBarang: {fileID: 21300000, guid: acc0735f17dd456489242c24db2e3f1e, type: 3}
+  GambarBarangToolTip: {fileID: 1869070340, guid: 67a337efe3b44124880afd136572a358, type: 3}
   nyawaBarang: 100
   jenis: 0
   prefabsBox: {fileID: 113115932136102702, guid: 3e6b7d5ee979c9241901599d28a18f41, type: 3}

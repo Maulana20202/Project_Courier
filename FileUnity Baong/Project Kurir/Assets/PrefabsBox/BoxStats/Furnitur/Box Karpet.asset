@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box Karpet
+  m_EditorClassIdentifier: 
+  NamaBox: Box Karpet
+  Deskripsi: 
+  id: 11
+  Berat: 5
+  GambarBarang: {fileID: 21300000, guid: e85a8076df88ec643b18717dc4261f53, type: 3}
+  GambarIconMap: {fileID: 21300000, guid: 134e266eed4fb0c4ca1e6a709f1c9843, type: 3}
+  GambarBarangToolTip: {fileID: 21300000, guid: c4bc0d9efa004474e9276634088cfb0a, type: 3}
+  nyawaBarang: 100
+  jenis: 1
+  prefabsBox: {fileID: 8123006965326829392, guid: e2cd4876e7f3cd64d83bf90a6ef0e176, type: 3}

@@ -19,6 +19,20 @@ public class StatsMobil : MonoBehaviour
 
     public Slider SliderKesehatanMobil;
 
+    public ManagerUI managerUI;
+
+    public float HargaUpgradeBensinMin;
+
+    public float HargaBensinCurrent;
+
+    public float HargaUpgradeKondisiMin;
+
+    public float HargaKondisiCurrent;
+
+    public float HargaUpgradeKapasitasMin;
+
+    public float HargaKapasitasCurrent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +42,6 @@ public class StatsMobil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SliderBensin.value = StatsBensin;
-
-        SliderKesehatanMobil.value = StatsKesehatanMobil;
+         
     }
 }

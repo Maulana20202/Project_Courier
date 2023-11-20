@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box Keyboard
+  m_EditorClassIdentifier: 
+  NamaBox: Box Keyboard
+  Deskripsi: 
+  id: 1
+  Berat: 2
+  GambarBarang: {fileID: 21300000, guid: a984f1e16def83e4bbb2aca37db627b0, type: 3}
+  GambarIconMap: {fileID: 21300000, guid: 14804ddfc418fed4aa8525643896ffc1, type: 3}
+  GambarBarangToolTip: {fileID: 21300000, guid: 29797c5b06a06e94489c0bf66ab9ff4a, type: 3}
+  nyawaBarang: 100
+  jenis: 0
+  prefabsBox: {fileID: 8756021898388824268, guid: 6338743c18588b24db93e0bc4dc40f91, type: 3}

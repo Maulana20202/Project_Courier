@@ -21,8 +21,10 @@ public class UIDuitScript : MonoBehaviour
     public string JumlahUangText;
     // Start is called before the first frame update
     public void Start(){
-
-        instance = this;
+        if(instance == null){
+            instance = this;
+        }
+        
         JumlahUang = SaveUI.JumlahUang;
     }
     // Update is called once per frame

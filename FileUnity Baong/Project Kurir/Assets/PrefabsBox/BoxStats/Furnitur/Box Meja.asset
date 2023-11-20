@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box Meja
+  m_EditorClassIdentifier: 
+  NamaBox: 
+  Deskripsi: 
+  id: 15
+  Berat: 10
+  GambarBarang: {fileID: 21300000, guid: 7e508be44eb60fa4ba158de2cd656187, type: 3}
+  GambarBarangToolTip: {fileID: 21300000, guid: 061db1fef2c782a48b66920856f79a8c, type: 3}
+  nyawaBarang: 100
+  jenis: 0
+  prefabsBox: {fileID: 2700186357079868012, guid: 10d3c626084834c4eacfd6a8b37d6a4a, type: 3}

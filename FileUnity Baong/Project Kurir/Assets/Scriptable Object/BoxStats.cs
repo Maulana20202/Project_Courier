@@ -11,6 +11,10 @@ public class BoxStats : ScriptableObject
     public int id;
     public float Berat;
     public Sprite GambarBarang;
+
+    public Sprite GambarIconMap;
+
+    public Sprite GambarBarangToolTip;
     public int nyawaBarang;
 
     public JenisBarang jenis;

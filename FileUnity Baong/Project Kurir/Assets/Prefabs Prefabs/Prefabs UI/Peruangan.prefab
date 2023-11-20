@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fa5a3e06b0590448273b488baca32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumlahUang: 0
+  JumlahUang: 100000
   SaveUI: {fileID: 11400000, guid: a4e7b3457d209b548a9608949db3c803, type: 2}
   TextUang: {fileID: 0}
   JumlahUangText: 

@@ -12,6 +12,10 @@ public class WheelController : MonoBehaviour
 
     public StatsMobil statsMobil;
 
+
+
+    public ManagerUI managerUI;
+
     [SerializeField] WheelCollider frontRight;
     [SerializeField] WheelCollider frontLeft;
     [SerializeField] WheelCollider backRight;
@@ -32,18 +36,33 @@ public class WheelController : MonoBehaviour
 
     public bool Driving;
 
+    [Header("Bensin value")]
+
+    public float BensinValueMin = 100;
+    public float BensinValueMax = 100;
+    public float BensinValue = 100;
+
+    [Header("Kondisi Kendaraan value")]
+    
+    public float KondisiKendaraanValueMin = 100;
+    public float KondisiKendaraanValueMax = 100;
+
+    public float KondisiKendaraanValue = 100;
+
+    public float WaktuNgurang;
+
+    public float WaktuNgurangCurrent;
+
+    //Savean
+
+    public SaveanValueMotor saveanMotor;
+
     private void FixedUpdate()
     {
         
-        if (statsMobil.StatsBensin <= 0)
-        {
-            currentAcceleration = 0f;
-            currentBreakForce = 1000f;
-            currentTurnAngle = 0f;
-        }
 
 
-        if (Driving && statsMobil.StatsBensin > 0)
+        if (Driving)
         {
             currentAcceleration = acceleration * Input.GetAxis("Vertical");
 
@@ -88,38 +107,49 @@ public class WheelController : MonoBehaviour
         trans.rotation = rotation;
     }
 
-    void OnCollisionEnter(Collision col){
-        if (currentAcceleration >= 200f){
-            currentAcceleration = 0f;
-            trunkManager.MinusNyawa();
-
-            if (statsMobil.StatsKesehatanMobil > 0)
-            {
-
-                statsMobil.StatsKesehatanMobil -= 1f;
-            }
+     void OnCollisionEnter(Collision col){
+        if (Mathf.Abs(currentAcceleration) >= 1){
+            KondisiKendaraanValue -= 5;
         }
-        Debug.Log("Nabrak");
-        
+
+        trunkManager.MinusNyawa();
     }
     // Start is called before the first frame update
     void Start()
     {
         trunkManager = GetComponentInChildren<TrunkManager>();
         statsMobil = GetComponentInChildren<StatsMobil>();
+        managerUI = FindAnyObjectByType<ManagerUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
-        if ( currentAcceleration >= 300f)
-        {
-
-                statsMobil.StatsBensin -= 0.00002f;
-            
+        if(Mathf.Abs(currentAcceleration) > 1){
+            if(WaktuNgurangCurrent <= 0){
+                BensinValue -= 5;
+                WaktuNgurangCurrent = WaktuNgurang;
+            } else {
+                WaktuNgurangCurrent -= Time.deltaTime;
+            }
         }
 
+        saveanMotor.BensinValueMax = BensinValueMax;
+        saveanMotor.KondisiValueMax = KondisiKendaraanValueMax;
+
+        SliderUI();
+
     }
+
+    void SliderUI(){
+        managerUI.UIBensinSlider.maxValue = BensinValueMax;
+
+        managerUI.UIBensinSlider.value = BensinValue;
+
+        managerUI.UIKondisiSlider.maxValue = KondisiKendaraanValueMax;
+
+        managerUI.UIKondisiSlider.value = KondisiKendaraanValue;
+    }
+
+   
 }

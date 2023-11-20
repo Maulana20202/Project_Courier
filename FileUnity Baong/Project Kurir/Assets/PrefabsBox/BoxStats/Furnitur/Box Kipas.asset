@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box Kipas
+  m_EditorClassIdentifier: 
+  NamaBox: Box Kipas
+  Deskripsi: 
+  id: 13
+  Berat: 3
+  GambarBarang: {fileID: 21300000, guid: 089d4cdd7bbc84c49a989e17e1d73de8, type: 3}
+  GambarIconMap: {fileID: 21300000, guid: c21ac9260099ba543b4c68d515a22ec1, type: 3}
+  GambarBarangToolTip: {fileID: 21300000, guid: 5287d4dac7c739f4ba6cf058d38a941e, type: 3}
+  nyawaBarang: 100
+  jenis: 0
+  prefabsBox: {fileID: 9061976118334533367, guid: b7119f3d772ee6a49a4f1a033a87026a, type: 3}

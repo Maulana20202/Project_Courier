@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     public GameObject Kardus;
     public GameObject Judul;
     public GameObject Blur;
+    public GameObject PressSpace;
 
     public GameObject AudioMusic;
 
@@ -38,6 +39,7 @@ public class MenuManager : MonoBehaviour
             Kardus.SetActive(true);
             Judul.SetActive(true);
             Blur.SetActive(true);
+            PressSpace.SetActive(false);
         }
 
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -45,6 +47,7 @@ public class MenuManager : MonoBehaviour
             Kardus.GetComponent<Animator>().SetBool("Kardus Keluar", true);
             Judul.GetComponent<Animator>().SetBool("Judul Keluar", true);
             StartCoroutine("DelayAnimasiKardusKeluar");
+            PressSpace.SetActive(true);
         }
     }
 
@@ -56,7 +59,7 @@ public class MenuManager : MonoBehaviour
         AnimasiPressStart.SetBool("Kelar Masuk", true);
         AnimasiPressStart.SetBool("Baru Masuk", false);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
    
         AudioMusic.SetActive(true);
 

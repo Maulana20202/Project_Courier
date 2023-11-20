@@ -39,8 +39,8 @@ public class AnimasiPengendara : MonoBehaviour
         animator.SetIKRotation(AvatarIKGoal.LeftFoot, IKPoints[5].rotation);
 
 
-        animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 2.0f);
-        animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 2.0f);
+        animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1.0f);
+        animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1.0f);
 
         animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 2.0f);
         animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 2.0f);

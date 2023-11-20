@@ -15,6 +15,7 @@ public class TooltipManager : MonoBehaviour
     public TextMeshProUGUI NamaBarang;
     public TextMeshProUGUI Deskripsi;
     public TextMeshProUGUI NyawaBarang;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,13 +30,27 @@ public class TooltipManager : MonoBehaviour
         transform.position = Input.mousePosition;
     }
 
-    public void MunculinToolTip(string Namabarang, string deskripsi, string Nyawabarang, Sprite gambarBarang)
+    public void MunculinToolTip(float Nyawabarang, BoxStats boxStats)
     {
         this.gameObject.SetActive(true);
-        GambarBarang.sprite = gambarBarang;
-        NamaBarang.text = Namabarang;
-        Deskripsi.text = deskripsi;
-        NyawaBarang.text = Nyawabarang;
+
+            GambarBarang.sprite = boxStats.GambarBarangToolTip;   
+
+            if(Nyawabarang >= 75){
+                NamaBarang.text = "Sempurna";
+                NamaBarang.faceColor = new Color (4, 140, 7, 255);
+            } else if(Nyawabarang >= 50 && Nyawabarang < 75){
+                NamaBarang.text = "Bagus";
+                NamaBarang.faceColor = new Color (133, 185, 2, 255);
+            } else if(Nyawabarang >= 25 && Nyawabarang < 50){
+                NamaBarang.text = "Rusak";
+                NamaBarang.faceColor = new Color (255, 144, 3, 255);
+            } else if(Nyawabarang < 25){
+                NamaBarang.text = "Rusak Sekali";
+                NamaBarang.faceColor = new Color (254, 0, 1, 255);
+            }
+
+
     }
 
     public void HideToolTip()

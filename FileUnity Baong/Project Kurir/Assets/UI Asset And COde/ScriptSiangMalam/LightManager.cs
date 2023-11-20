@@ -10,7 +10,8 @@ public class LightingManager : MonoBehaviour
 
     [SerializeField] private DirectionalColorPreset PresetHujan;
     //Variables
-    [SerializeField, Range(0,86400)] private float TimeOfDay;
+    [SerializeField, Range(0,86400)] public float TimeOfDay;
+    public bool MatahariStop;
 
 
     void Awake(){
@@ -30,26 +31,36 @@ public class LightingManager : MonoBehaviour
 
         if (Application.isPlaying)
         {
-            //(Replace with a reference to the game time)
-            TimeOfDay += Time.deltaTime * 100;
-            TimeOfDay %= 86400; //Modulus to ensure always between 0-24
-            UpdateLighting(TimeOfDay / 86400f);
+            if(DirectionalLight != null){
+                //(Replace with a reference to the game time)
+                if(!MatahariStop){
+                    TimeOfDay += Time.deltaTime * 100;
+                }  
+                TimeOfDay %= 86400; //Modulus to ensure always between 0-24
+                UpdateLighting(TimeOfDay / 86400f);
+            }
+            
         }
         else
         {
-            UpdateLighting(TimeOfDay / 86400f);
+            if(DirectionalLight != null){
+                UpdateLighting(TimeOfDay / 86400f);
+            }
         }
     }
 
 
     private void UpdateLighting(float timePercent)
     {
-        if(HujanTrigger.Instance != null && HujanTrigger.Instance.HujanMulai != true){
-            RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
-            RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercent);
-        } else {
-            RenderSettings.ambientLight = PresetHujan.AmbientColor.Evaluate(timePercent);
-            RenderSettings.fogColor = PresetHujan.FogColor.Evaluate(timePercent);
+        if (DirectionalLight != null)
+        {
+            if(HujanTrigger.Instance != null && HujanTrigger.Instance.HujanMulai != true){
+                RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercent);
+                RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercent);
+            } else {
+                RenderSettings.ambientLight = PresetHujan.AmbientColor.Evaluate(timePercent);
+                RenderSettings.fogColor = PresetHujan.FogColor.Evaluate(timePercent);
+            }
         }
         //Set ambient and fog
        

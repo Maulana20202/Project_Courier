@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box Ukulele
+  m_EditorClassIdentifier: 
+  NamaBox: Box Ukulele
+  Deskripsi: 
+  id: 22
+  Berat: 4
+  GambarBarang: {fileID: 21300000, guid: 0cbfcdc816970e94f8880b090fe2ea7e, type: 3}
+  GambarIconMap: {fileID: 21300000, guid: 1b0374ada53b0e743aa4760de9b5c6b6, type: 3}
+  GambarBarangToolTip: {fileID: 21300000, guid: 6f6ca618e61596b4cb0e710922cb2911, type: 3}
+  nyawaBarang: 100
+  jenis: 0
+  prefabsBox: {fileID: 6159893681025579265, guid: ab09e87de685f994982abfb5876a5a62, type: 3}

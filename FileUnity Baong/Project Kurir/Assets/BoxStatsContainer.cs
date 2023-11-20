@@ -60,7 +60,7 @@ public class BoxStatsContainer : MonoBehaviour
         var boxStatuss = obj.GetComponent<Box>();
         boxStatsObject = obj;
         boxStatus = boxStatuss.boxStats;
-        nyawaBarang = boxStats.nyawaBarang;
+        boxStatuss.nyawaBarang = NyawaBarang;
         boxStatuss.Diambil = true;
 
 

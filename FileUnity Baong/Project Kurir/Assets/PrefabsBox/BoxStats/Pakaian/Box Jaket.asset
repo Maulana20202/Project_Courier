@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box Jaket
+  m_EditorClassIdentifier: 
+  NamaBox: Box Jaket
+  Deskripsi: 
+  id: 26
+  Berat: 2
+  GambarBarang: {fileID: 21300000, guid: d48b38fbf55bdfe45b8895e134dadbb0, type: 3}
+  GambarIconMap: {fileID: 21300000, guid: a2332039471dede4ebdcb8bc72a7d30e, type: 3}
+  GambarBarangToolTip: {fileID: 21300000, guid: be533ee262a60cb4c9c75fff045d3105, type: 3}
+  nyawaBarang: 100
+  jenis: 1
+  prefabsBox: {fileID: 316037976636786748, guid: 0fc84a87a14c52449954650a149cddbe, type: 3}

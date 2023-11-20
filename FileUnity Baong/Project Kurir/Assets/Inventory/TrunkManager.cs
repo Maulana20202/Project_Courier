@@ -52,7 +52,8 @@ public class TrunkManager : MonoBehaviour
             saveanList.ListBagasi = Items;
             saveanList.ListNyawaBarang = nyawaBarang;
         }
-
+        
+    if(HujanTrigger.Instance != null){
         if(HujanTrigger.Instance.HujanMulai){
 
             if(CountDownCurrent <= 0){
@@ -65,6 +66,8 @@ public class TrunkManager : MonoBehaviour
             }
             
         }
+    }
+        
         
     }
 

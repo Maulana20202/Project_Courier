@@ -54,8 +54,6 @@ public class Box : interactable
             }
             
 
-        nyawaBarang = boxStats.nyawaBarang;
-
         if(IsMengambil){
             StartCoroutine(DelayDiambil());
         }

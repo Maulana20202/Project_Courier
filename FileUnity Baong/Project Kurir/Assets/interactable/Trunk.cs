@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
@@ -21,9 +22,15 @@ public class Trunk : interactable
 
     public float beratBarang;
 
+    public float beratBarangMin;
+
     public float beratBarangCurrent;
 
     public bool NgitungBerat;
+
+    public TextMeshProUGUI KapasitasCurrent;
+
+    public TextMeshProUGUI KapasitasMax;
 
     //savean
 
@@ -38,7 +45,7 @@ public class Trunk : interactable
         
         NgitungBerat = true;
         trunkManager = GetComponent<TrunkManager>();
-
+        
         beratBarang = saveanMotor.MuatanValueMax;
     }
 
@@ -121,9 +128,30 @@ public class Trunk : interactable
 
     protected override void Interact()
     {
-        if(BoxStatsContainer.Instance.AngkutBarang){
+            KapasitasCurrent = InventoryCanvas.transform.GetChild(0).transform.GetChild(5).transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            KapasitasMax = InventoryCanvas.transform.GetChild(0).transform.GetChild(5).transform.GetChild(2).GetComponent<TextMeshProUGUI>();
 
-            if (beratBarangCurrent < beratBarang)
+            KapasitasCurrent.text = beratBarangCurrent.ToString();
+            KapasitasMax.text = beratBarang.ToString();
+            Inventory.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            playerMovement.enabled = false;
+            playerCameraRotation.enabled = false;
+
+            trunkManager.listItem();
+            this.gameObject.tag = "MainTrunk";
+            InventoryController.Instance.Bagasi = this.gameObject;
+
+        
+        
+
+    }
+
+    protected override void InteractAlter()
+    {
+        
+        if (beratBarangCurrent < beratBarang)
             {
                 if(BoxStatsContainer.Instance.boxStatus != null){
                     
@@ -137,29 +165,6 @@ public class Trunk : interactable
                 }
 
             }
-
-        } else {
-            
-            Inventory.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            playerMovement.enabled = false;
-            playerCameraRotation.enabled = false;
-
-            trunkManager.listItem();
-            this.gameObject.tag = "MainTrunk";
-            InventoryController.Instance.Bagasi = this.gameObject;
-
-        }
-        
-        
-
-    }
-
-    protected override void InteractAlter()
-    {
-        
-       
     }
 
 }

@@ -16,10 +16,12 @@ public class CheckerTerlambat : MonoBehaviour
         
         if(Terlambat == true){
             UIWaktuScript.Instance.hour = 8;
+            UIWaktuScript.Instance.gameObject.GetComponent<LightingManager>().TimeOfDay = 28800;
             Terlambat = false;
             SaveanJam.Telat = false;
         } else {
             UIWaktuScript.Instance.hour = 5;
+            UIWaktuScript.Instance.gameObject.GetComponent<LightingManager>().TimeOfDay = 18000;
         }
     }
 

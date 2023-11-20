@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Savean Bagasi Motor
   m_EditorClassIdentifier: 
   ListBagasi:
-  - {fileID: 11400000, guid: b1ee0d780069d824e954cd6603ad7de1, type: 2}
-  - {fileID: 11400000, guid: e9d4260a6a59f134981938941bc677a9, type: 2}
-  ListNyawaBarang: []
+  - {fileID: 11400000, guid: c9eb894b80d03e64b804c2610be40456, type: 2}
+  - {fileID: 11400000, guid: 996d3a7e81e306f47ae183cc17dcb4b6, type: 2}
+  - {fileID: 11400000, guid: cc429472e13a0de459fddebd4521303f, type: 2}
+  - {fileID: 11400000, guid: ba76837c2103da94fb76f4ca6d182c4f, type: 2}
+  - {fileID: 11400000, guid: ac2f0dd1d48fcd541af8599ca4592c29, type: 2}
+  ListNyawaBarang:
+  - 100
+  - 100
+  - 100
+  - 100
+  - 100

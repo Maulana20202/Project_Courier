@@ -14,6 +14,10 @@ public class MotorController : MonoBehaviour
 
     public Animator animateMundur;
 
+    public float puteran;
+
+    public float multiplermuter;
+
     public AnimasiPengendara animasiPengendara;
     public Transform TitikKakiKiri;
     public Transform TitikAwalKaki;
@@ -111,6 +115,10 @@ public class MotorController : MonoBehaviour
         saveanMotor.KondisiValueMax = KondisiKendaraanValueMax;
 
         SliderUI();
+
+        if(grounded && !Driving){
+            carBody.isKinematic = true;
+        }
        
     }
 
@@ -199,7 +207,7 @@ public class MotorController : MonoBehaviour
         if (Driving)
         {
             Handle.localRotation = Quaternion.Slerp(Handle.localRotation, Quaternion.Euler(Handle.localRotation.eulerAngles.x,
-                               10 * horizontalInput, Handle.localRotation.eulerAngles.z), 0.1f);
+                               multiplermuter * horizontalInput - puteran, Handle.localRotation.eulerAngles.z), 0.1f);
 
             Wheel[0].localRotation = rb.transform.localRotation;
             Wheel[1].localRotation = rb.transform.localRotation;

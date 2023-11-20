@@ -7,6 +7,8 @@ public abstract class interactable : MonoBehaviour
 
     public string promptMessage;
 
+    public GameObject Atasan;
+
 
     public void BaseInteract()
     {

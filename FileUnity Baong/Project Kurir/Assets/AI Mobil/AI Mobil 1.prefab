@@ -691,7 +691,6 @@ GameObject:
   - component: {fileID: 605725643630803283}
   - component: {fileID: 6552792253739899455}
   - component: {fileID: 2020808910359009228}
-  - component: {fileID: 1711756020179159330}
   m_Layer: 0
   m_Name: AI Mobil 1
   m_TagString: Untagged
@@ -707,7 +706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4664641900431331487}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -30.526943, y: 2.18, z: 4.661047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -765,44 +764,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.076271, y: 1.2238448, z: 4.9031787}
   m_Center: {x: 0, y: 0.7726699, z: -0.010217428}
---- !u!114 &1711756020179159330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4664641900431331487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d163cf6f80969a441ad13abfb00331ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PathPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Index: 0
-  MinimumDistance: 2
-  speed: 3
-  CarVelocity: {x: 0, y: 0, z: 0}
-  frontRightTransform: {fileID: 3843537572350305873}
-  frontLeftTransform: {fileID: 3456112977020407467}
-  backRightTransform: {fileID: 1420241851308976749}
-  backLeftTransform: {fileID: 606060634732244506}
-  frontRight: {fileID: 6960687711132106085}
-  frontLeft: {fileID: 3220236523913931566}
-  backRight: {fileID: 3471357194152690801}
-  backLeft: {fileID: 1553445113297887850}
-  maxSteerAngle: 50
-  maxTorque: 20
-  maxBrakeTorque: 0
-  RayDistance: 5
-  waypoint: {fileID: 0}
 --- !u!1 &5578922698625954724
 GameObject:
   m_ObjectHideFlags: 0

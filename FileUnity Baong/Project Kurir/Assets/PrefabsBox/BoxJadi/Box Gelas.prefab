@@ -104,9 +104,10 @@ MonoBehaviour:
   rb: {fileID: 0}
   BC: {fileID: 0}
   boxStats: {fileID: 11400000, guid: e9d4260a6a59f134981938941bc677a9, type: 2}
-  nyawaBarang: 0
+  nyawaBarang: 100
   thisBox: {fileID: 0}
   Diambil: 0
+  IsMengambil: 0
 --- !u!54 &3811091755902597479
 Rigidbody:
   m_ObjectHideFlags: 0

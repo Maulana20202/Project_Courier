@@ -13,6 +13,8 @@ public class Garasi : interactable
     public GameObject UIGameplay;
 
     public GameObject UIGarasi;
+
+    public GarasiScript garasi;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,8 @@ public class Garasi : interactable
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        garasi.SpawnPertama();
 
     }
 }

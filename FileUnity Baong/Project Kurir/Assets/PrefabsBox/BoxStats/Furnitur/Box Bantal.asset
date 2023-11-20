@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box Bantal
+  m_EditorClassIdentifier: 
+  NamaBox: Box Bantal
+  Deskripsi: 
+  id: 10
+  Berat: 1
+  GambarBarang: {fileID: 21300000, guid: fa6aeb8541f03a544a05a84ebdc6b98c, type: 3}
+  GambarIconMap: {fileID: 21300000, guid: 6889d4b199e68784883a7035fe4bfa79, type: 3}
+  GambarBarangToolTip: {fileID: 21300000, guid: f52eb267e66ae7d48a906cfe5ed3cc11, type: 3}
+  nyawaBarang: 100
+  jenis: 1
+  prefabsBox: {fileID: 6579634211177148391, guid: e94a6893044368b43b20aff3ad79b30a, type: 3}

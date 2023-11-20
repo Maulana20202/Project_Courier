@@ -52,9 +52,9 @@ Material:
     - _CastShadows: 0
     - _Cull: 0
     - _DstBlend: 10
-    - _IntersectionDepth: 0.89
+    - _IntersectionDepth: 0.86
     - _NoiseScale: 5
-    - _NoiseSpeed: 0.47
+    - _NoiseSpeed: 1.16
     - _NoiseStrength: 0
     - _QueueControl: 0
     - _QueueOffset: 0

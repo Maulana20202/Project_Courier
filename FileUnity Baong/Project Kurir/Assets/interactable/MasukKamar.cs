@@ -41,6 +41,8 @@ public class MasukKamar : interactable
          MainMenu.SetActive(false);
         LoadingScreen.SetActive(true);
 
+        UIWaktuScript.Instance.hour = 8;
+
         StartCoroutine(LoadingScreenWait(1));
     }
 

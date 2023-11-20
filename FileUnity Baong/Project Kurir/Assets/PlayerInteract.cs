@@ -17,6 +17,8 @@ public class PlayerInteract : MonoBehaviour
     public GameObject player;
 
     public bool RayCastCheck;
+
+    public interactable Interactable;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,23 +39,36 @@ public class PlayerInteract : MonoBehaviour
             if(hitInfo.collider.GetComponent<interactable>() != null)
             {
                 RayCastCheck = true;
-                interactable interactable = hitInfo.collider.GetComponent<interactable>();
-                playerUI.UpdateText(interactable.promptMessage);
+                Interactable = hitInfo.collider.GetComponent<interactable>();
+                playerUI.UpdateText(Interactable.promptMessage);
+
+                if(Interactable.Atasan != null){
+                    Interactable.Atasan.SetActive(true);
+                }
+                
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    interactable.BaseInteract();
+                    Interactable.BaseInteract();
                 }
 
                 if (Input.GetKeyDown(KeyCode.G))
                 {
-                    interactable.BaseInteractAlter();
+                    Interactable.BaseInteractAlter();
                 }
             } 
             else
             {
                 RayCastCheck = false;
             }
+        } else {
+
+            if(Interactable != null){
+                if(Interactable.Atasan != null){
+                    Interactable.Atasan.SetActive(false);
+                }
+            }
+            
         }
 
     }

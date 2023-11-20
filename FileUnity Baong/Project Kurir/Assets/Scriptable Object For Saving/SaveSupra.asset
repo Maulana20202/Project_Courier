@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3884e75d75612f4dba489243906c78f, type: 3}
   m_Name: SaveSupra
   m_EditorClassIdentifier: 
-  BensinValueMax: 100
-  MuatanValueMax: 100
-  KondisiValueMax: 100
+  BensinValueMax: 400
+  MuatanValueMax: 20
+  KondisiValueMax: 150
+  HargaBensin: 40000
+  HargaKondisi: 25000
+  HargaMuatan: 20000

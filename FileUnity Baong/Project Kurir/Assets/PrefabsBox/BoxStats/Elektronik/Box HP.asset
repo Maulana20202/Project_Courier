@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d33a016bddc62a469fa39763c685af3, type: 3}
+  m_Name: Box HP
+  m_EditorClassIdentifier: 
+  NamaBox: Box HP
+  Deskripsi: 
+  id: 5
+  Berat: 1
+  GambarBarang: {fileID: 21300000, guid: 5667741b6229ef746971d71324028308, type: 3}
+  GambarIconMap: {fileID: 21300000, guid: 9ec7c94f9bc54944480c2c6f0ff0c99b, type: 3}
+  GambarBarangToolTip: {fileID: 21300000, guid: 8fcd90a80b2b68041b953123501a533f, type: 3}
+  nyawaBarang: 100
+  jenis: 0
+  prefabsBox: {fileID: 82341783171052172, guid: 7ad6f55878d5bb5408a7c915f562bd4c, type: 3}
