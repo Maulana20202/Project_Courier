@@ -69,6 +69,8 @@ public class MotorController : MonoBehaviour
 
     public float WaktuNgurangCurrent;
 
+    public Animator animasiBlack;
+
     //Savean
 
     public SaveanValueMotor saveanMotor;
@@ -81,6 +83,10 @@ public class MotorController : MonoBehaviour
 
     public TrunkManager trunkManager;
 
+    PlayerCameraRotation playerCameraRotation;
+
+    PlayerMovement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +96,12 @@ public class MotorController : MonoBehaviour
         managerUI = FindAnyObjectByType<ManagerUI>();
 
         trunkManager = GetComponentInChildren<TrunkManager>();
+
+        animasiBlack = GameObject.FindWithTag("BlackScreen").GetComponent<Animator>();
+
+        playerCameraRotation = FindAnyObjectByType<PlayerCameraRotation>();
+
+        playerMovement = FindAnyObjectByType<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -109,6 +121,10 @@ public class MotorController : MonoBehaviour
             } else {
                 WaktuNgurangCurrent -= Time.deltaTime;
             }
+        }
+
+        if(BensinValue <= 0){
+            StartCoroutine(BensinAbis());
         }
 
         saveanMotor.BensinValueMax = BensinValueMax;
@@ -248,5 +264,29 @@ public class MotorController : MonoBehaviour
         managerUI.UIKondisiSlider.maxValue = KondisiKendaraanValueMax;
 
         managerUI.UIKondisiSlider.value = KondisiKendaraanValue;
+    }
+
+    IEnumerator BensinAbis(){
+        animasiBlack.SetBool("FadeOut", false);
+        animasiBlack.SetBool("FadeIn", true);
+
+        Driving = false;
+
+        yield return new WaitForSeconds(6);
+        if( UIDuitScript.instance.JumlahUang >= 40000){
+            UIDuitScript.instance.JumlahUang -= 40000;
+        } else {
+            UIDuitScript.instance.JumlahUang = 0;
+        }
+        
+        BensinValue = BensinValueMax;
+
+        animasiBlack.SetBool("FadeOut", true);
+        animasiBlack.SetBool("FadeIn", false);
+        
+
+        yield return new WaitForSeconds(2);
+
+        Driving = true;
     }
 }

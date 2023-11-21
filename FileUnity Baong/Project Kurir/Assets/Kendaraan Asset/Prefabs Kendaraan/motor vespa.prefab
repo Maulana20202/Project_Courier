@@ -1894,6 +1894,7 @@ MonoBehaviour:
   CountDownCurrent: 0
   InventoryContainer: {fileID: 0}
   trunkControllers: []
+  JasHujan: 0
 --- !u!114 &4784372609171828639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3193,6 +3194,7 @@ MonoBehaviour:
   UpgradeKondisi: 0
   UpgradeMuatan: 0
   SelisihBensin: 0
+  GambarKendaraan: {fileID: 21300000, guid: 4d452e2cc1381454a97206b370c90dca, type: 3}
   HargaBensin: 10000
   motorStats: {fileID: 105644002447843670}
   BagasiMotor: {fileID: 0}
@@ -3357,6 +3359,7 @@ MonoBehaviour:
   KondisiKendaraanValue: 100
   WaktuNgurang: 5
   WaktuNgurangCurrent: 5
+  animasiBlack: {fileID: 0}
   saveanMotor: {fileID: 11400000, guid: f9b9089ce4557044eac20035ad9b3174, type: 2}
   managerUI: {fileID: 0}
   trunkManager: {fileID: 0}

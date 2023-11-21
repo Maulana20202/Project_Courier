@@ -166,6 +166,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &589714971040200941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9154804463819558193}
+  m_Layer: 0
+  m_Name: RayDirection1 (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9154804463819558193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589714971040200941}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.21614124, z: -0, w: 0.97636217}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8305820084247144376}
+  m_LocalEulerAnglesHint: {x: 0, y: 25, z: 0}
 --- !u!1 &970308223998140412
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +339,37 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!1 &2759223776078675091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6402508388336767194}
+  m_Layer: 0
+  m_Name: RayDirection2 (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6402508388336767194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2759223776078675091}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.21673785, z: -0, w: 0.97622985}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8305820084247144376}
+  m_LocalEulerAnglesHint: {x: 0, y: -25, z: 0}
 --- !u!1 &2959856658954866187
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +523,8 @@ Transform:
   - {fileID: 1503758115035459711}
   - {fileID: 1921575302390486600}
   - {fileID: 7687457136444532027}
+  - {fileID: 9154804463819558193}
+  - {fileID: 6402508388336767194}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &8767802725821180195
@@ -524,14 +588,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PathPoints: []
+  Player: {fileID: 0}
+  spawnerMobil: {fileID: 0}
   Index: 0
   MinimumDistance: 2
+  MaximumDistance: 60
   speed: 3
   CarVelocity: {x: 0, y: 0, z: 0}
   frontRightTransform: {fileID: 6511036318351246246}
   frontLeftTransform: {fileID: 848412244003031087}
   backRightTransform: {fileID: 9066250657837156180}
   backLeftTransform: {fileID: 1591501957624775661}
+  Ray1: {fileID: 9154804463819558193}
+  Ray2: {fileID: 6402508388336767194}
   frontRight: {fileID: 6523439703001768411}
   frontLeft: {fileID: 3091254451301240404}
   backRight: {fileID: 6868848724323562750}

@@ -98,4 +98,22 @@ public class StatsAerox : StatsKendaraan
             UIDuitScript.instance.JumlahUang -= Harga;
         }
     }
+
+    protected override void MengisiKondisi(){
+        if(motorStats.KondisiKendaraanValue < motorStats.KondisiKendaraanValueMax){
+
+            float SelisihBensin;
+
+            float Harga;
+
+            SelisihBensin = motorStats.KondisiKendaraanValueMax - motorStats.KondisiKendaraanValue;
+
+            Harga = SelisihBensin / 100 * HargaBensin;
+
+
+            motorStats.KondisiKendaraanValue = motorStats.KondisiKendaraanValueMax;
+
+            UIDuitScript.instance.JumlahUang -= Harga;
+        }
+    }
 }

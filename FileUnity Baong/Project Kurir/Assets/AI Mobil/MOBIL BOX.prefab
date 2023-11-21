@@ -320,6 +320,68 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2445636523663919249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7120682986088446281}
+  m_Layer: 0
+  m_Name: RayDirection2 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7120682986088446281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445636523663919249}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.21673785, z: -0, w: 0.97622985}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1220923074459446191}
+  m_LocalEulerAnglesHint: {x: 0, y: -25, z: 0}
+--- !u!1 &4830097194111998527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8281289410934821298}
+  m_Layer: 0
+  m_Name: RayDirection1 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8281289410934821298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830097194111998527}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.21614124, z: -0, w: 0.97636217}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1220923074459446191}
+  m_LocalEulerAnglesHint: {x: 0, y: 25, z: 0}
 --- !u!1 &5535699816037482857
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +795,8 @@ Transform:
   - {fileID: 1667344921216955680}
   - {fileID: 8392711337972298771}
   - {fileID: 8454447830968343265}
+  - {fileID: 8281289410934821298}
+  - {fileID: 7120682986088446281}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &7909045524797652340
@@ -796,14 +860,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PathPoints: []
+  Player: {fileID: 0}
+  spawnerMobil: {fileID: 0}
   Index: 0
   MinimumDistance: 2
+  MaximumDistance: 60
   speed: 3
   CarVelocity: {x: 0, y: 0, z: 0}
   frontRightTransform: {fileID: 3487685314071667707}
   frontLeftTransform: {fileID: 2789328685468019242}
   backRightTransform: {fileID: 3474570271462672056}
   backLeftTransform: {fileID: 7688254220400688699}
+  Ray1: {fileID: 8281289410934821298}
+  Ray2: {fileID: 7120682986088446281}
   frontRight: {fileID: 5589836810786849124}
   frontLeft: {fileID: 8029564147857845136}
   backRight: {fileID: 2386967613535623540}
@@ -811,7 +880,7 @@ MonoBehaviour:
   maxSteerAngle: 60
   maxTorque: 20
   maxBrakeTorque: 0
-  RayDistance: 3
+  RayDistance: 4
   mask:
     serializedVersion: 2
     m_Bits: 0

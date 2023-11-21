@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIInventoryContainer : MonoBehaviour
@@ -14,6 +15,9 @@ public class UIInventoryContainer : MonoBehaviour
     public PlayerMovement playerMovement;
 
     public PlayerCameraRotation playerCameraRotation;
+
+    public TextMeshProUGUI JasHujanJumlah;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +39,10 @@ public class UIInventoryContainer : MonoBehaviour
             Destroy(item.gameObject);
         }
 
+    }
+
+    public void JumlahJasHujan(){
+        JasHujanJumlah.text = JasHujanTempat.instance.JasHujan.ToString();
     }
 
     public void Exit(){

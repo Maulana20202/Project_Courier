@@ -6,6 +6,10 @@ public class MissionSummon : MonoBehaviour
 {
     public List<MonoBehaviour> Misi = new List<MonoBehaviour>();
 
+    public List<MonoBehaviour> Misi2 = new List<MonoBehaviour>();
+
+    public List<MonoBehaviour> Misi3 = new List<MonoBehaviour>();
+
     public SaveUIValue SaveUI;
 
     
@@ -19,8 +23,17 @@ public class MissionSummon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if(MisiAktif != 0){
-            Misi[MisiAktif].enabled = true;
+
+            if(GameManager.Instance.KotaTerpilih[1] == true){
+                Misi[MisiAktif].enabled = true;
+            } else if(GameManager.Instance.KotaTerpilih[2] == true){
+                Misi2[MisiAktif].enabled = true;
+            } else if(GameManager.Instance.KotaTerpilih[3] == true) {
+                Misi3[MisiAktif].enabled = true;
+            }
         }
 
         if(MisiAktif == 0){

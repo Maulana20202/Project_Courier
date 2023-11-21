@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
-
+    public static EventManager instance;
     public Animator animBlackScreen;
 
     public MasukKamar masukKamar;
@@ -19,10 +19,16 @@ public class EventManager : MonoBehaviour
 
     public Slider SliderProgressValue;
 
+    public PlayerMovement playerMovement;
+
+    public PlayerCameraRotation playerCameraRotation;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = this;
+        playerCameraRotation = FindAnyObjectByType<PlayerCameraRotation>();
+        playerMovement = FindAnyObjectByType<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -34,6 +40,10 @@ public class EventManager : MonoBehaviour
             
             SaveTelat.Telat = true;
             StartCoroutine(LoadingScreenWait(1));
+        }
+
+        if(playerMovement.StatsPerut <= 0){
+            StartCoroutine(perutAbis());
         }
     }
 
@@ -56,4 +66,35 @@ public class EventManager : MonoBehaviour
             yield return null;
         }
     }
+
+    
+
+    IEnumerator perutAbis(){
+        animBlackScreen.SetBool("FadeOut", false);
+        animBlackScreen.SetBool("FadeIn", true);
+
+        playerCameraRotation.enabled = false;
+        playerMovement.enabled = false;
+
+        yield return new WaitForSeconds(6);
+        if( UIDuitScript.instance.JumlahUang >= 40000){
+            UIDuitScript.instance.JumlahUang -= 40000;
+        } else {
+            UIDuitScript.instance.JumlahUang = 0;
+        }
+        
+        playerMovement.StatsPerut = 100;
+
+        animBlackScreen.SetBool("FadeOut", true);
+        animBlackScreen.SetBool("FadeIn", false);
+        
+
+        yield return new WaitForSeconds(2);
+
+        playerCameraRotation.enabled = true;
+        playerMovement.enabled = true;
+
+    }
+
+    
 }

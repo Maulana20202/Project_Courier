@@ -29,7 +29,7 @@ public class KeluarKamar : interactable
         MainMenu.SetActive(false);
         LoadingScreen.SetActive(true);
 
-        StartCoroutine(LoadingScreenWait(1));
+        StartCoroutine(LoadingScreenWait(2));
     }
 
 

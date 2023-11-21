@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public AudioSource Audio;
+
+    public AudioSource AudioMalam;
     // Start is called before the first frame update
 
     void Awake(){
@@ -26,6 +28,6 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         
     }
 }

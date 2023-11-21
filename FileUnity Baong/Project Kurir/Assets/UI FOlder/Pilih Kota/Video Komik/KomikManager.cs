@@ -23,31 +23,20 @@ public class KomikManager : MonoBehaviour
 
         playerCameraRotation = FindAnyObjectByType<PlayerCameraRotation>();
 
-        if(GameManager.Instance.KotaTerpilih[2] == true && GameManager.Instance.KotaKomik[2] == false){
-            Video2.SetActive(true);
+        if(GameManager.Instance.KotaTerpilih[1] == true && GameManager.Instance.KotaKomik[1] == false){
+            Video1.SetActive(true);
             GameUI.SetActive(false);
             playCountDown = true;
-            GameManager.Instance.KotaKomik[2] = true;
-            HitungMundurCurrent = 248f;
+            GameManager.Instance.KotaKomik[1] = true;
+            HitungMundurCurrent = 210f;
             UIWaktuScript.Instance.TIMESCALE = 0;
             UIWaktuScript.Instance.gameObject.GetComponent<LightingManager>().MatahariStop = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             playerMovement.enabled = false;
             playerCameraRotation.enabled = false;
-
-        } else if(GameManager.Instance.KotaTerpilih[3] == true && GameManager.Instance.KotaKomik[3] == false){
-            Video3.SetActive(true);
-            GameUI.SetActive(false);
-            playCountDown = true;
-            GameManager.Instance.KotaKomik[3] = true;
-            UIWaktuScript.Instance.TIMESCALE = 0;
-            UIWaktuScript.Instance.gameObject.GetComponent<LightingManager>().MatahariStop = true;
-            HitungMundurCurrent = 248f;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            playerMovement.enabled = false;
-            playerCameraRotation.enabled = false;
+            AudioManager.instance.Audio.gameObject.GetComponent<Animator>().SetBool("FadeIn", false);
+            AudioManager.instance.Audio.gameObject.GetComponent<Animator>().SetBool("FadeOut", true);
         }
     }
 

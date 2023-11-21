@@ -19,6 +19,8 @@ public class StatsKendaraan : MonoBehaviour
 
     public float SelisihBensin;
 
+    public Sprite GambarKendaraan;
+
     public float HargaBensin = 10000f;
     // Start is called before the first frame update
     public void BaseUpgradingBensin(){
@@ -36,6 +38,9 @@ public class StatsKendaraan : MonoBehaviour
     public void BaseMengisiBensin(){
         MengisiBensin();
     }
+    public void BaseMengisiKondisi(){
+        MengisiKondisi();
+    }
 
     protected virtual void UpgradingBensin(){
 
@@ -50,6 +55,10 @@ public class StatsKendaraan : MonoBehaviour
     }
 
     protected virtual void MengisiBensin(){
+
+    }
+
+    protected virtual void MengisiKondisi(){
 
     }
 }

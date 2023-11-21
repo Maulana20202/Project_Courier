@@ -14,6 +14,10 @@ public class HujanTrigger : MonoBehaviour
 
     public bool HujanMulai;
 
+    public MeshCollider Lantai;
+
+    public PhysicMaterial MaterialLicin;
+
     public GameObject DirectionalColor;
     // Start is called before the first frame update
     void Awake()
@@ -26,10 +30,20 @@ public class HujanTrigger : MonoBehaviour
     {
         if(HujanMulai == true){
             Hujan.SetActive(true);
+            Lantai.material = MaterialLicin;
             DirectionalColor.SetActive(false);
         } else {
             Hujan.SetActive(false);
+            Lantai.material = null;
             DirectionalColor.SetActive(true);
         }
+    }
+
+    public void PakaiJasHujan(){
+        if(JasHujanTempat.instance.JasHujan >= 1){
+            JasHujanTempat.instance.PakeJasHujan = true;
+            JasHujanTempat.instance.JasHujan -= 1;
+        }
+        
     }
 }

@@ -167,8 +167,6 @@ public class PilihKota : MonoBehaviour
             }
 
             UIPilihKota.SetActive(false);
-            AudioManager.instance.Audio.gameObject.GetComponent<Animator>().SetBool("FadeOut", true);
-            AudioManager.instance.Audio.gameObject.GetComponent<Animator>().SetBool("FadeIn", false);
             StartCoroutine(BlackScreenWait());
         }
     }

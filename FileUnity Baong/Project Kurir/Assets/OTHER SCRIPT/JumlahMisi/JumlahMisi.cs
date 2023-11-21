@@ -40,6 +40,7 @@ public class JumlahMisi : MonoBehaviour
         if(JumlahMisiCurrent <= 0){
             misiSummon.Misi[misiSummon.MisiAktif].enabled = false;
             misiSummon.MisiAktif = 0;
+            BarangKetinggalan.Instance.SpawnKetinggalan = false;
         }
     }
         

@@ -20,7 +20,7 @@ public class SpawnNPC : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindWithTag("PlayerUtama");
-        MaxDistance = 10f;
+        MaxDistance = 80f;
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class SpawnNPC : MonoBehaviour
         Jarak = Vector3.Distance(this.gameObject.transform.position,Player.transform.position);
 
         if(Vector3.Distance(this.gameObject.transform.position,Player.transform.position) < MaxDistance && Already_Spawn == false){
-            int RandomAngka = Random.Range(0, DaftarNPC.Count);
+            int RandomAngka = Random.Range(0, DaftarNPC.Count - 1);
 
             GameObject SpawnNpc = Instantiate(DaftarNPC[RandomAngka], this.gameObject.transform.position, this.gameObject.transform.rotation);
 

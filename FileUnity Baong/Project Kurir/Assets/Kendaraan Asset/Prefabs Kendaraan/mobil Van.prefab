@@ -975,6 +975,7 @@ MonoBehaviour:
   UpgradeKondisi: 0
   UpgradeMuatan: 0
   SelisihBensin: 0
+  GambarKendaraan: {fileID: 21300000, guid: ad15fc775309eb14b9c995bebb5dcb85, type: 3}
   HargaBensin: 10000
   motorStats: {fileID: 8926142851748275183}
   BagasiMotor: {fileID: 0}
@@ -1727,6 +1728,7 @@ MonoBehaviour:
   CountDownCurrent: 0
   InventoryContainer: {fileID: 0}
   trunkControllers: []
+  JasHujan: 0
 --- !u!114 &2514833373722703606
 MonoBehaviour:
   m_ObjectHideFlags: 0

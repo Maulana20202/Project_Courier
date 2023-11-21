@@ -30,7 +30,7 @@ public class StatsVespa : StatsKendaraan
         HargaBensinCurrent = saveanHarga.HargaBensin;
         HargaKondisiCurrent = saveanHarga.HargaKondisi;
         HargaKapasitasCurrent = saveanHarga.HargaMuatan;
-                StatsBensin = saveanHarga.UpgradeBensinValue;
+        StatsBensin = saveanHarga.UpgradeBensinValue;
         StatsKondisi = saveanHarga.UpgradeKondisiValue;
         StatsMuatan = saveanHarga.UpgradeMuatanValue;
     }
@@ -94,6 +94,24 @@ public class StatsVespa : StatsKendaraan
 
 
             motorStats.BensinValue = motorStats.BensinValueMax;
+
+            UIDuitScript.instance.JumlahUang -= Harga;
+        }
+    }
+
+    protected override void MengisiKondisi(){
+        if(motorStats.KondisiKendaraanValue < motorStats.KondisiKendaraanValueMax){
+
+            float SelisihBensin;
+
+            float Harga;
+
+            SelisihBensin = motorStats.KondisiKendaraanValueMax - motorStats.KondisiKendaraanValue;
+
+            Harga = SelisihBensin / 100 * HargaBensin;
+
+
+            motorStats.KondisiKendaraanValue = motorStats.KondisiKendaraanValueMax;
 
             UIDuitScript.instance.JumlahUang -= Harga;
         }

@@ -7,10 +7,16 @@ public class Mobil_Script : MonoBehaviour
 {
     [SerializeField] private Transform[] PathPoints;
 
+    public GameObject Player;
+
+    public SpawnerMobil spawnerMobil;
+
 
     public int Index;
 
     public float MinimumDistance = 2;
+
+    public float MaximumDistance = 2;
 
     public float speed = 3f;
     public Vector3 CarVelocity;
@@ -19,6 +25,9 @@ public class Mobil_Script : MonoBehaviour
     public Transform frontLeftTransform;
     public Transform backRightTransform;
     public Transform backLeftTransform;
+
+    public Transform Ray1;
+    public Transform Ray2;
 
     public WheelCollider frontRight;
     public WheelCollider frontLeft;
@@ -41,7 +50,7 @@ public class Mobil_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        MaximumDistance = 100f;
         
     }
 
@@ -49,22 +58,19 @@ public class Mobil_Script : MonoBehaviour
     void Update()
     {
         
-        
         Ray r = new Ray(new Vector3 (transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward);
+        Ray r2 = new Ray(new Vector3 (Ray1.position.x, Ray1.position.y + 1f, Ray1.position.z), Ray1.forward);
+        Ray r3 = new Ray(new Vector3 (Ray2.position.x, Ray2.position.y + 1f, Ray2.position.z), Ray2.forward);
         Debug.DrawRay(r.origin, r.direction * RayDistance);
+        Debug.DrawRay(r2.origin, r2.direction * RayDistance);
+        Debug.DrawRay(r3.origin, r3.direction * RayDistance);
         RaycastHit hitInfo;
 
-        if(Physics.Raycast(r, out hitInfo, RayDistance)){
+        if(Physics.Raycast(r, out hitInfo, RayDistance) || Physics.Raycast(r2, out hitInfo, RayDistance) || Physics.Raycast(r3, out hitInfo, RayDistance)){
             maxTorque = 0f;
             maxBrakeTorque = 700f;
         } else {
             maxTorque = 100f;
-            maxBrakeTorque = 0f;
-        }
-
-        if(Physics.Raycast(r, out hitInfo, RayDistance, mask)){
-            maxBrakeTorque = 100f;
-        } else {
             maxBrakeTorque = 0f;
         }
 
@@ -78,6 +84,7 @@ public class Mobil_Script : MonoBehaviour
         NgadepPoint();
         Drive();
         Roam();
+        DeSpawn();
         
         UpdateWheel(frontRight, frontRightTransform);
         UpdateWheel(frontLeft, frontLeftTransform);
@@ -142,6 +149,13 @@ public class Mobil_Script : MonoBehaviour
 
         trans.position = position;
         trans.rotation = rotation;
+    }
+
+    void DeSpawn(){
+        if(Vector3.Distance(transform.position, Player.transform.position) > MaximumDistance){
+            spawnerMobil.Already_Spawn = false;
+            Destroy(this.gameObject);
+        }
     }
 }
 

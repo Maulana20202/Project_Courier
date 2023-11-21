@@ -12,6 +12,7 @@ TagManager:
   - Main Camera
   - Matahari
   - MiniCam
+  - BlackScreen
   layers:
   - Default
   - TransparentFX

@@ -41,10 +41,10 @@ public class TooltipManager : MonoBehaviour
                 NamaBarang.faceColor = new Color (23, 190, 1, 255);
             } else if(Nyawabarang >= 50 && Nyawabarang < 75){
                 NamaBarang.text = "Bagus";
-                NamaBarang.faceColor = new Color (133, 185, 2, 255);
+                NamaBarang.faceColor = new Color (209, 229, 38, 255);
             } else if(Nyawabarang >= 25 && Nyawabarang < 50){
                 NamaBarang.text = "Rusak";
-                NamaBarang.faceColor = new Color (255, 144, 3, 255);
+                NamaBarang.faceColor = new Color (238, 156, 19, 255);
             } else if(Nyawabarang < 25){
                 NamaBarang.text = "Rusak Sekali";
                 NamaBarang.faceColor = new Color (254, 0, 1, 255);

@@ -142,7 +142,7 @@ public class Trunk : interactable
             trunkManager.listItem();
             this.gameObject.tag = "MainTrunk";
             InventoryController.Instance.Bagasi = this.gameObject;
-
+            UIInventoryContainer.instance.JumlahJasHujan();
         
         
 

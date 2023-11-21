@@ -23,6 +23,8 @@ public class TrunkManager : MonoBehaviour
     public UIInventoryContainer InventoryContainer;
 
     public TrunkController[] trunkControllers;
+
+    public bool JasHujan;
     // Start is called before the first frame update
     public void Awake()
     {
@@ -55,15 +57,16 @@ public class TrunkManager : MonoBehaviour
         
     if(HujanTrigger.Instance != null){
         if(HujanTrigger.Instance.HujanMulai){
-
-            if(CountDownCurrent <= 0){
+            if(JasHujanTempat.instance.PakeJasHujan == false){
+                if(CountDownCurrent <= 0){
                 for(int i = 0 ; i < nyawaBarang.Count; i++){
                 nyawaBarang[i] -= 3;
                 }
                 CountDownCurrent = CountDown;
-            } else {
-                CountDownCurrent -= Time.deltaTime;
-            }
+                } else {
+                    CountDownCurrent -= Time.deltaTime;
+                }
+            }  
             
         }
     }

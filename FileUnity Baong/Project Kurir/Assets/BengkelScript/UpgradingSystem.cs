@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradingSystem : MonoBehaviour
 {
@@ -19,6 +21,12 @@ public class UpgradingSystem : MonoBehaviour
     public GameObject CanvasBensinValue;
     public GameObject CanvasKondisiValue;
     public GameObject CanvasMuatanValue;
+
+    public MotorController motorController;
+    public WheelController mobilController;
+    public Slider Kondisi;
+
+    public Image GambarKendaraan;
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,9 +43,22 @@ public class UpgradingSystem : MonoBehaviour
     {
         if (Kendaraan != null){
             Stats = Kendaraan.GetComponentInChildren<StatsKendaraan>();
+            GambarKendaraan.sprite = Stats.GambarKendaraan;
         } else {
             Stats = null;
         }
+
+    if (Kendaraan != null){
+        if(Stats.gameObject.GetComponent<MotorController>() != null){
+            motorController = Stats.gameObject.GetComponent<MotorController>();
+            Kondisi.maxValue = motorController.KondisiKendaraanValueMax;
+            Kondisi.value = motorController.KondisiKendaraanValue;
+        } else if (Stats.gameObject.GetComponent<WheelController>() != null){
+            mobilController = Stats.gameObject.GetComponent<WheelController>();
+            Kondisi.maxValue = mobilController.KondisiKendaraanValueMax;
+            Kondisi.value = mobilController.KondisiKendaraanValue;
+        }
+    }
 
         //Pengatur Stats Upgrade Bensin Udah Berapa
 
@@ -158,6 +179,10 @@ public class UpgradingSystem : MonoBehaviour
 
     public void IsiBensin(){
         Stats.BaseMengisiBensin();
+    }
+
+    public void KondisiMembaik(){
+        Stats.BaseMengisiKondisi();
     }
 
     public void Exit(){

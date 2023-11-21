@@ -27,12 +27,13 @@ public class NPCScript : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         Agent.SetDestination(waypoint.transform.position);
 
-        MaximumDistance = 70f;
+        MaximumDistance = 100f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         Roam();
 
         DeSpawn();

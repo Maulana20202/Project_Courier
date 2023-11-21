@@ -18,3 +18,8 @@ MonoBehaviour:
   HargaBensin: 30000
   HargaKondisi: 25000
   HargaMuatan: 20000
+  UpgradeBensinValue: 0
+  UpgradeKondisiValue: 0
+  UpgradeMuatanValue: 0
+  BensinCurrent: 0
+  KondisiCurrent: 0

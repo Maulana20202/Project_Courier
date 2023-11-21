@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         Instance = this;
+        
     }
 
     // Update is called once per frame
@@ -32,8 +33,10 @@ public class PlayerStats : MonoBehaviour
 
         StatsStaminaSlider.value = StatsStamina;
 
-
-        StatsStamina = PlayerMovement.instance.StatsStamina;
-        StatsPerut = PlayerMovement.instance.StatsPerut;
+        if(PlayerMovement.instance != null){
+            StatsStamina = PlayerMovement.instance.StatsStamina;
+            StatsPerut = PlayerMovement.instance.StatsPerut;    
+        }
+        
     }
 }
