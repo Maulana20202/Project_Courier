@@ -24,7 +24,13 @@ public class JumlahMisi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+        if(instance == null){
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        } else {
+            Destroy(this.gameObject);
+        }
+        
     }
 
     // Update is called once per frame
@@ -36,13 +42,13 @@ public class JumlahMisi : MonoBehaviour
         TextJumlahMisiCurrent.text = JumlahMisiCurrentText;
         TextJumlahMission.text = jumlahMissionText;
 
-    if(misiSummon.MisiAktif != 0){
-        if(JumlahMisiCurrent <= 0){
-            misiSummon.Misi[misiSummon.MisiAktif].enabled = false;
-            misiSummon.MisiAktif = 0;
-            BarangKetinggalan.Instance.SpawnKetinggalan = false;
+        if(misiSummon.MisiAktif != 0){
+            if(JumlahMisiCurrent <= 0){
+                misiSummon.Misi[misiSummon.MisiAktif].enabled = false;
+                misiSummon.MisiAktif = 0;
+                BarangKetinggalan.Instance.SpawnKetinggalan = false;
+            }
         }
-    }
         
-     }
+    }
 }

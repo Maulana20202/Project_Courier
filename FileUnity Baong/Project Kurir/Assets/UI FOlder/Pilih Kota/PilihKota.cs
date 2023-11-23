@@ -36,7 +36,7 @@ public class PilihKota : MonoBehaviour
     }
 
     public void LanjutIndex(){
-        if(Index > 0){
+        if(Index > 0 && Index < 3){
             Index++;
 
             if(Index == 1){
@@ -169,6 +169,17 @@ public class PilihKota : MonoBehaviour
             UIPilihKota.SetActive(false);
             StartCoroutine(BlackScreenWait());
         }
+    }
+
+    public void Exit(){
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerCameraRotation = FindObjectOfType<PlayerCameraRotation>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        playerMovement.enabled = true;
+        playerCameraRotation.enabled = true;
+        UIPilihKota.SetActive(false);
     }
 
     IEnumerator BlackScreenWait(){

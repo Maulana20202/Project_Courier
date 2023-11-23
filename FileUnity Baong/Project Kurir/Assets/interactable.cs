@@ -9,6 +9,8 @@ public abstract class interactable : MonoBehaviour
 
     public GameObject Atasan;
 
+    public GameObject Highlight;
+
 
     public void BaseInteract()
     {
