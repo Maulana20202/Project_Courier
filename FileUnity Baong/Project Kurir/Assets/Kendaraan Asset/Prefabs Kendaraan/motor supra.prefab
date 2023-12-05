@@ -1417,6 +1417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Buka Bagasi
   Atasan: {fileID: 0}
+  Highlight: {fileID: 0}
   InventoryCanvas: {fileID: 0}
   Inventory: {fileID: 0}
   playerMovement: {fileID: 0}
@@ -1734,9 +1735,9 @@ MonoBehaviour:
     m_Radius: 3.37
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7162199431294812771}
+  - {fileID: 2933474080615856037}
+  - {fileID: 2060726272539327727}
 --- !u!114 &3950524909746019402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,6 +2118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Naik Motor
   Atasan: {fileID: 0}
+  Highlight: {fileID: 0}
   controllerMobil: {fileID: 8954899156073669977}
   playerUtama: {fileID: 0}
   TitikDuduk: {fileID: 0}
@@ -3947,7 +3949,7 @@ MonoBehaviour:
   m_CenterOnActivate: 1
 --- !u!1 &6458335906104468637
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3964,7 +3966,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &4455498937674645786
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3980,7 +3982,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2933474080615856037
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4187,7 +4189,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6860302415977769747
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4204,7 +4206,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &8679654361144407249
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4220,7 +4222,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7162199431294812771
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4349,7 +4351,7 @@ MeshRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7107880520574143078
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4366,7 +4368,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &8006001613919529651
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4382,7 +4384,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2060726272539327727
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -12,4 +13,7 @@ public class DirectionalColorPreset : ScriptableObject
     [SerializeField] public Gradient DirectionalColor;
     [SerializeField] public Gradient FogColor;
 
+    [SerializeField] public Gradient SkyColor;
+
+    [SerializeField] public Gradient EquatorColor; 
 }

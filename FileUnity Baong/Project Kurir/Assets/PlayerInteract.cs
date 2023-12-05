@@ -41,8 +41,12 @@ public class PlayerInteract : MonoBehaviour
                 RayCastCheck = true;
                 Interactable = hitInfo.collider.GetComponent<interactable>();
                 playerUI.UpdateText(Interactable.promptMessage);
-                Interactable.Highlight.SetActive(true);
 
+                if(Interactable.Highlight != null){
+                    Interactable.Highlight.SetActive(true);
+
+                }
+                
                 if(Interactable.Atasan != null){
                     Interactable.Atasan.SetActive(true);
                 }
@@ -72,7 +76,12 @@ public class PlayerInteract : MonoBehaviour
             }
 
             if(Interactable != null){
-                Interactable.Highlight.SetActive(false);
+
+                 if(Interactable.Highlight != null){
+                    Interactable.Highlight.SetActive(false);
+                    
+                }
+                
             }
 
             

@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
     // Var Stats Bar
     public Slider StatsPerutSlider;
     public Slider StatsStaminaSlider;
-
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StatsVespa : StatsKendaraan
 {
-    public MotorController motorStats;
+    public WheelControllerMotor motorStats;
 
     public Trunk BagasiMotor;
 

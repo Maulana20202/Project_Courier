@@ -152,7 +152,7 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 0
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -1637,6 +1637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Masuk Mobil
   Atasan: {fileID: 0}
+  Highlight: {fileID: 0}
   controllerMobil: {fileID: 6162562600462279796}
   playerUtama: {fileID: 0}
   TitikDuduk: {fileID: 5329853224122415638}
@@ -2258,6 +2259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Buka Trunk
   Atasan: {fileID: 0}
+  Highlight: {fileID: 0}
   InventoryCanvas: {fileID: 0}
   Inventory: {fileID: 0}
   playerMovement: {fileID: 0}

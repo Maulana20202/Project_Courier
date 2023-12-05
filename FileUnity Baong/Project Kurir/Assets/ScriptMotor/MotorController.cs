@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.UIElements.Experimental;
 using System.Diagnostics;
+using Unity.Mathematics;
 
 public class MotorController : MonoBehaviour
 {
@@ -112,7 +113,7 @@ public class MotorController : MonoBehaviour
         Visuals();
 
 
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f - 0.2f, whatIsGround);
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
         if(carVelocity.z < -1){
             if(WaktuNgurangCurrent <= 0){
@@ -227,7 +228,7 @@ public class MotorController : MonoBehaviour
             Handle.localRotation = Quaternion.Slerp(Handle.localRotation, Quaternion.Euler(Handle.localRotation.eulerAngles.x,
                                multiplermuter * horizontalInput - puteran, Handle.localRotation.eulerAngles.z), 0.1f);
 
-            Wheel[0].localRotation = rb.transform.localRotation;
+            Wheel[0].localRotation = Quaternion.Euler(rb.transform.localRotation.x, rb.transform.localRotation.y, Wheel[0].localRotation.eulerAngles.z);
             Wheel[1].localRotation = rb.transform.localRotation;
 
             //Body

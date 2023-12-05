@@ -642,6 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Buka Bagasi
   Atasan: {fileID: 0}
+  Highlight: {fileID: 0}
   InventoryCanvas: {fileID: 0}
   Inventory: {fileID: 0}
   playerMovement: {fileID: 0}
@@ -5234,6 +5235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Naik Motor
   Atasan: {fileID: 0}
+  Highlight: {fileID: 0}
   controllerMobil: {fileID: 8402136519733748703}
   playerUtama: {fileID: 0}
   TitikDuduk: {fileID: 0}

@@ -75,9 +75,8 @@ public class LightingManager : MonoBehaviour
             }
             
 
-            DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timePercent * 360f) - 90f, 170f, 0));
-            
              DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timePercent * 360f) - 90f, 170f, 0));
+        
         }
 
     }
